@@ -1,0 +1,68 @@
+﻿@using Spreadtrum.LHD.Mvc.Areas.Shared
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Url.Title</title>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/FontAwesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    @RenderSection("css", true)
+</head>
+<body data-ng-app="myApp">
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+              @Html.Partial("~/Areas/Shared/Navigator.cshtml")
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a href="/Help/UsersGuide.pdf" target="_blank">Help</a>
+                        </li>
+                        <li>
+							<a href="/Accounts/login">
+								<i class="fa fa-sign-out"></i> Log out
+							</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-12">
+                    <h2>@ViewBag.Url.Title</h2>                    
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                @RenderBody()
+            </div>
+            <div class="footer">
+                <div>Copyright &copy; @DateTime.Now.Year Spreadtrum Communications Inc.,All Rights Reserved</div>
+            </div>
+            <input type="hidden" id="hidCurrentUserID" value="@BaseController.CurrentUserInfo.UserID"/>
+            <input type="hidden" id="hidCurrentUserRole" value="@BaseController.CurrentUserInfo.Role" />
+        </div>
+    </div>
+    <!-- Mainly scripts -->
+    <script src="~/Scripts/Jquery/jquery-2.2.3.js"></script>
+    <script src="~/Scripts/Angular/angular.min.js"></script>
+    <script src="~/Scripts/Bootstrap/bootstrap.js"></script>
+    <script src="~/Scripts/Bootstrap/bootstrap-paginator.js"></script>
+    <script src="~/Scripts/Jquery/jquery.metisMenu.js"></script>
+    <script src="~/Scripts/Jquery/jquery.slimscroll.min.js"></script>
+    <script src="~/Scripts/inspinia.js"></script>	
+    <script src="~/Scripts/masterPage.js"></script>
+    <script src="~/Scripts/public.js"></script>
+    <script src="~/Content/KaYiLib/KaYiPoster/KaYiPoster.js"></script>
+    @RenderSection("js", true)
+</body>
+</html>

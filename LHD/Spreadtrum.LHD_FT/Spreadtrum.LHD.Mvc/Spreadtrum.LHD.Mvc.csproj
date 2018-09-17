@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBE9B5AE-46C1-4143-A763-037E5EDD8FA6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spreadtrum.LHD.Mvc</RootNamespace>
+    <AssemblyName>Spreadtrum.LHD.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KaYi.Emails.Library">
+      <HintPath>..\Reference\KaYi.Emails.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.FileSystem">
+      <HintPath>..\Reference\KaYi.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Services.EventServices">
+      <HintPath>..\Reference\KaYi.Services.EventServices.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Utilities">
+      <HintPath>..\Reference\KaYi.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Web.Infrastructure">
+      <HintPath>..\Reference\KaYi.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\Reference\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\Reference\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\Reference\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Spreadtrum.LHD.Entity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Spreadtrum.LHD.Entity\bin\Debug\Spreadtrum.LHD.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Accounts\Content\css\login.css" />
+    <Content Include="Areas\Accounts\Content\js\login.js" />
+    <Content Include="Areas\Lots\Contents\Comment\comments.css" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-comment-status.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-doc.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-pc.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-pcadmin.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-pe.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-peadmin.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-qa.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-qaadmin.png" />
+    <Content Include="Areas\Lots\Contents\Comment\icon-vendor.png" />
+    <Content Include="Areas\Lots\Contents\Details\Details.js" />
+    <Content Include="Areas\Lots\Contents\Query\Query.css" />
+    <Content Include="Areas\Lots\Contents\Query\Query.js" />
+    <Content Include="Areas\Users\Contents\UserManager.css" />
+    <Content Include="Areas\Users\Contents\UserManager.js" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap.css" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Bootstrap\BootstrapValidator\css\bootstrapValidator.css" />
+    <Content Include="Content\Bootstrap\BootstrapValidator\css\bootstrapValidator.min.css" />
+    <Content Include="Content\Bootstrap\BootstrapValidator\js\bootstrapValidator.js" />
+    <Content Include="Content\Bootstrap\BootstrapValidator\js\bootstrapValidator.min.js" />
+    <Content Include="Content\Exports\ExportLots.xml" />
+    <Content Include="Content\Exports\ExportSwbins.xml" />
+    <Content Include="Content\FontAwesome\css\font-awesome.css" />
+    <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\KaYiLib\KaYiDialog\KaYiDialog.js" />
+    <Content Include="Content\KaYiLib\KaYiGrid\css\KaYiGrid.css" />
+    <Content Include="Content\KaYiLib\KaYiGrid\js\KaYiGrids.js" />
+    <Content Include="Content\KaYiLib\KaYiLoader\js\KaYiLoader.js" />
+    <Content Include="Content\KaYiLib\KaYiPoster\KaYiPoster.js" />
+    <Content Include="Content\KaYiLib\Pager\css\pager.css" />
+    <Content Include="Content\KaYiLib\Pager\images\pager_icons.gif" />
+    <Content Include="Content\KaYiLib\Pager\js\Pager.js" />
+    <Content Include="Content\KaYiLib\Uploader\image\btnUpload.jpg" />
+    <Content Include="Content\KaYiLib\Uploader\image\XPButtonNoText_160x22.png" />
+    <Content Include="Content\KaYiLib\Uploader\Referenced\swfupload.cookies.js" />
+    <Content Include="Content\KaYiLib\Uploader\Referenced\swfupload.js" />
+    <Content Include="Content\KaYiLib\Uploader\Referenced\swfupload.proxy.js" />
+    <Content Include="Content\KaYiLib\Uploader\Referenced\swfupload.queue.js" />
+    <Content Include="Content\KaYiLib\Uploader\Referenced\swfupload.speed.js" />
+    <Content Include="Content\KaYiLib\Uploader\Referenced\swfupload.swf" />
+    <Content Include="Content\KaYiLib\Uploader\Referenced\swfupload_fp9.swf" />
+    <Content Include="Content\style.css" />
+    <Content Include="Emails\OSATNotification.aspx" />
+    <Content Include="Export\NPOI.CSS.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\120.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\profile_small.jpg" />
+    <Content Include="Scripts\Angular\angular-mocks.js" />
+    <Content Include="Scripts\Angular\angular-sanitize.min.js" />
+    <Content Include="Scripts\Angular\angular.js" />
+    <Content Include="Scripts\Angular\angular.min.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap-paginator.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\inspinia.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Jquery\jquery-2.2.3.js" />
+    <Content Include="Scripts\Jquery\jquery.metisMenu.js" />
+    <Content Include="Scripts\Jquery\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\Jquery\UI\AUTHORS.txt" />
+    <Content Include="Scripts\Jquery\UI\external\jquery.datetimepicker.css" />
+    <Content Include="Scripts\Jquery\UI\external\jquery.datetimepicker.full.js" />
+    <Content Include="Scripts\Jquery\UI\index.html" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.css" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.js" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.min.css" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.min.js" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.structure.css" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.theme.css" />
+    <Content Include="Scripts\Jquery\UI\jquery-ui.theme.min.css" />
+    <Content Include="Scripts\Jquery\UI\LICENSE.txt" />
+    <Content Include="Scripts\masterPage.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\OtherBinDispose.js" />
+    <Content Include="Scripts\public.js" />
+    <Content Include="Views\errorPage.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Accounts.Controllers\LoginController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Accounts\AccountsAreaRegistration.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots.Controllers\CommentController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots.Controllers\DetailsController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots.Controllers\DisposeController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots.Controllers\ExportController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots.Controllers\QueryController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots.Controllers\QueryUtility.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots.Controllers\SWBinController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Lots\LotsAreaRegistration.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Shared\BaseController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Shared\NavigatorHelper.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Systems.Controllers\TipController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Systems.Controllers\UploaderController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Systems\SystemsAreaRegistration.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Users.Controllers\SPRDController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Users.Controllers\UserManagerController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Areas.Users\UsersAreaRegistration.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Controllers\b2bLoginController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Controllers\HomeController.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc.Emails\OSATNotification.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Mvc.Export\Exporthelper.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc\AdLoginHelper.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Spreadtrum.LHD.Mvc\Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Areas\Accounts\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Accounts\Views\web.config" />
+    <Content Include="Areas\Lots\Views\Details\Index.cshtml" />
+    <Content Include="Areas\Lots\Views\Query\Index.cshtml" />
+    <Content Include="Areas\Lots\Views\SWBin\Index.cshtml" />
+    <Content Include="Areas\Lots\Views\web.config" />
+    <Content Include="Areas\Shared\masterPage.cshtml" />
+    <Content Include="Areas\Shared\Navigator.cshtml" />
+    <Content Include="Areas\Shared\web.config" />
+    <Content Include="Areas\Systems\Views\web.config" />
+    <Content Include="Areas\Users\Views\UserManager\Index.cshtml" />
+    <Content Include="Areas\Users\Views\UserManager\OSAT.cshtml" />
+    <Content Include="Areas\Users\Views\web.config" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css.map" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\FontAwesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\FontAwesome\less\animated.less" />
+    <Content Include="Content\FontAwesome\less\bordered-pulled.less" />
+    <Content Include="Content\FontAwesome\less\core.less" />
+    <Content Include="Content\FontAwesome\less\fixed-width.less" />
+    <Content Include="Content\FontAwesome\less\font-awesome.less" />
+    <Content Include="Content\FontAwesome\less\icons.less" />
+    <Content Include="Content\FontAwesome\less\larger.less" />
+    <Content Include="Content\FontAwesome\less\list.less" />
+    <Content Include="Content\FontAwesome\less\mixins.less" />
+    <Content Include="Content\FontAwesome\less\path.less" />
+    <Content Include="Content\FontAwesome\less\rotated-flipped.less" />
+    <Content Include="Content\FontAwesome\less\stacked.less" />
+    <Content Include="Content\FontAwesome\less\variables.less" />
+    <Content Include="Content\FontAwesome\scss\font-awesome.scss" />
+    <Content Include="Content\FontAwesome\scss\_animated.scss" />
+    <Content Include="Content\FontAwesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\FontAwesome\scss\_core.scss" />
+    <Content Include="Content\FontAwesome\scss\_fixed-width.scss" />
+    <Content Include="Content\FontAwesome\scss\_icons.scss" />
+    <Content Include="Content\FontAwesome\scss\_larger.scss" />
+    <Content Include="Content\FontAwesome\scss\_list.scss" />
+    <Content Include="Content\FontAwesome\scss\_mixins.scss" />
+    <Content Include="Content\FontAwesome\scss\_path.scss" />
+    <Content Include="Content\FontAwesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\FontAwesome\scss\_stacked.scss" />
+    <Content Include="Content\FontAwesome\scss\_variables.scss" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Help\UsersGuide.pdf" />
+    <Content Include="Export\Excels\Lots\LOTS_20160622_062829.xls" />
+    <Content Include="Export\Excels\Lots\LOTS_20160713_092335.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160714_053740.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160715_043308.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160715_043314.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160726_061106.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160726_114213.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160726_121331.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160729_033452.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160802_093424.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160802_093438.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160823_104808.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160823_104818.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160823_104821.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160823_104826.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160823_104828.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160823_104832.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20160823_104837.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_014851.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_015053.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_015239.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_015420.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_015601.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_015743.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_031952.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_032128.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_032209.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_042154.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_111517.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_111602.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161123_111634.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161128_021820.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161128_022108.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161129_090221.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161129_090300.xlsx" />
+    <Content Include="Export\Excels\Lots\LOTS_20161130_102422.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG239749302_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG249807709_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG330024659.01_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG330090278.01_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG440402484.01_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG440435203.01_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG450446658.01_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_FTG450496151.01_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_G1CM15.1B001_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_G1GS91.1A001_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_KWACG_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_KWHNA_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_KWLNY_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT_THY628.00_SWBin.xlsx" />
+    <Content Include="Export\Excels\Swbins\LOT__SWBin.xlsx" />
+    <Content Include="Scripts\Angular\angular.min.js.map" />
+    <Content Include="Scripts\Jquery\UI\package.json" />
+    <None Include="Properties\PublishProfiles\LHDPublish.pubxml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Spreadtrum.LHD.Business\Spreadtrum.LHD.Business.csproj">
+      <Project>{fe22b3ec-4f9f-463a-9801-86ba2b6645e8}</Project>
+      <Name>Spreadtrum.LHD.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spreadtrum.LHD.DAL\Spreadtrum.LHD.DAL.csproj">
+      <Project>{12489c6e-716b-42c3-ae76-39c0edceac02}</Project>
+      <Name>Spreadtrum.LHD.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58291</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58259/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

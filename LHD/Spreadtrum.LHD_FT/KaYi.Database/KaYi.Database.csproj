@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{36EC0C13-EAF9-41F3-BDDF-87B246FE1422}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>KaYi.Database</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="KaYi.Services.EventServices">
+      <HintPath>..\KaYi.Services.EventServices\bin\Debug\KaYi.Services.EventServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KaYi.Database\Condition.cs" />
+    <Compile Include="KaYi.Database\Conditions.cs" />
+    <Compile Include="KaYi.Database\Connector.cs" />
+    <Compile Include="KaYi.Database\DALGateway.cs" />
+    <Compile Include="KaYi.Database\DALService.cs" />
+    <Compile Include="KaYi.Database\DataFormatUtilities.cs" />
+    <Compile Include="KaYi.Database\DBAbstract.cs" />
+    <Compile Include="KaYi.Database\DBFactory.cs" />
+    <Compile Include="KaYi.Database\DBOLEDB.cs" />
+    <Compile Include="KaYi.Database\DBOracle.cs" />
+    <Compile Include="KaYi.Database\DBSQLServer.cs" />
+    <Compile Include="KaYi.Database\Operator.cs" />
+    <Compile Include="KaYi.Database\OrderExpression.cs" />
+    <Compile Include="KaYi.Database\Statics.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

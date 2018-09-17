@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <appSettings>
+    <add key="Database" value="SQLSERVER" />
+    <add key="DBSchemaFile" value="schema.xml" />
+    <add key="dbConnectString" value="Password=sunshine!@12;Persist Security Info=True;User ID=sa;Initial Catalog=SpreadtrumLHD;Data Source=localhost;MultipleActiveResultSets=true" />
+  </appSettings>
+  <system.serviceModel>
+    <bindings />
+    <client />
+  </system.serviceModel>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+  </startup>
+  <connectionStrings>
+    <!--<add name="SpreadtrumLHDEntities" connectionString="metadata=res://*/LHDEntities.csdl|res://*/LHDEntities.ssdl|res://*/LHDEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=SpreadtrumLHD;persist security info=True;user id=sa;password=sunshine!@12;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />-->
+    <add name="SpreadtrumLHDEntities" connectionString="metadata=res://*/LHDEntities.csdl|res://*/LHDEntities.ssdl|res://*/LHDEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.0.0.158;initial catalog=SpreadtrumLHD;persist security info=True;user id=LHDUser;password=Pa55wd1!;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+
+  </connectionStrings>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v11.0" />
+      </parameters>
+    </defaultConnectionFactory>
+  </entityFramework>
+</configuration>

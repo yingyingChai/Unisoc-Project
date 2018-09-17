@@ -1,0 +1,6 @@
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\Spreadtrum.LHD.MessageCenter\obj\Debug\Spreadtrum.LHD.MessageCenter.csprojResolveAssemblyReference.cache
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\Spreadtrum.LHD.MessageCenter\obj\Debug\Spreadtrum.LHD.MessageCenter.Spreadtrum.LHD.MessageCenter.frmMain.resources
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\Spreadtrum.LHD.MessageCenter\obj\Debug\Spreadtrum.LHD.MessageCenter.Spreadtrum.LHD.MessageCenter.Properties.Resources.resources
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\Spreadtrum.LHD.MessageCenter\obj\Debug\Spreadtrum.LHD.MessageCenter.frmMain.resources
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\Spreadtrum.LHD.MessageCenter\obj\Debug\Spreadtrum.LHD.MessageCenter.csproj.GenerateResource.cache
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\Spreadtrum.LHD.MessageCenter\obj\Debug\Spreadtrum.LHD.MessageCenter.csproj.CoreCompileInputs.cache

@@ -1,0 +1,9 @@
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Release\Spreadtrum.LHD.DAL.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Release\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Release\KaYi.Utilities.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Release\Spreadtrum.LHD.Entity.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Release\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Release\KaYi.FileSystem.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Release\Spreadtrum.LHD.Entity.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\obj\Release\Spreadtrum.LHD.DAL.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\obj\Release\Spreadtrum.LHD.DAL.dll

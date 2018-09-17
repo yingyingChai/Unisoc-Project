@@ -1,0 +1,225 @@
+﻿@using Spreadtrum.LHD.Entity.Users
+@model IEnumerable<User>
+@{
+    ViewBag.Title = "OSAT";
+    Layout = "~/Areas/Shared/masterPage.cshtml";
+	string action = @ViewContext.RouteData.Values["action"].ToString();
+}
+@section css{
+
+}
+@section js{
+	<script>
+		//分页功能
+		$(function () {
+			//分页功能
+			var options = {
+				currentPage: @ViewBag.pageIndex,//当前页
+				totalPages: @ViewBag.pageCount,//一共多少页
+				numberOfPages: 5,//每次显示多少l页
+				pageUrl: function (type, page, current) {
+					return "@Request.Url.AbsolutePath?pageIndex="+page;
+				}
+			}
+			$('#example').bootstrapPaginator(options);
+		});
+	</script>
+}
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins">
+			<div class="ibox-content">
+				<div class="">
+					@*<a href="#QueryTr" data-toggle="collapse" class="btn btn-primary ">Query</a>*@
+					@*<a href="javascript:void(0);" class="btn btn-primary " data-toggle="modal" data-target="#AddUserModal">Add</a>*@
+					@*<a href="javascript:void(0);" class="btn btn-primary" id="editTr">Edit</a>*@
+					<a href="javascript:void(0);" class="btn btn-primary">Save</a>
+				</div>
+				<div class="table-responsive">
+					<div class="dataTables_wrapper form-inline dt-bootstrap">
+						<form method="post" id="addForm" onsubmit="return false;">
+							<table class="table table-striped table-bordered table-hover havaedit" role="grid">
+								<thead>
+									<tr role="row">
+										<th rowspan="2">Active</th>
+										<th rowspan="2">User Name</th>
+										<th rowspan="2">Mail</th>
+										<th rowspan="2">OSAT</th>
+										<th rowspan="2">Regist Time</th>
+										<th rowspan="2">Role</th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var item in Model)
+									{
+										<tr id="@item.UserID">
+											<td>
+												<input type="checkbox" />
+											</td>
+											<td>
+												<label>@item.FullName</label>
+											</td>
+											<td>
+												<label>@item.Email</label>
+											</td>
+											<td>
+												<label>@item.BUName</label>
+											</td>
+											<td>
+												<label>@item.CreateTime</label>
+											</td>
+											<td>
+												<label>@item.Role</label>
+											</td>
+										</tr>
+									}
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+					</div>
+					<div class="col-sm-7">
+						<div id="example" class=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@*$("#submitYes").modal("show");*@
+<div class="modal fade" id="submitYes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h1></h1>
+			</div>
+			<div class="modal-body text-center">
+				添加成功
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">YES</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*$("#submitRepeat").modal("show");*@
+<div class="modal fade" id="submitRepeat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h1></h1>
+			</div>
+			<div class="modal-body text-center">
+				该用户已存在
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">YES</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*$("#GetMailInfo").modal("show");*@
+<div class="modal fade" id="GetMailInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h1></h1>
+			</div>
+			<div class="modal-body text-center">
+				获取成功
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">YES</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*$("#GetMailInfo").modal("show");*@
+<div class="modal fade" id="AddUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="addUserForm">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h1>Add @action User</h1>
+				</div>
+				<div class="modal-body text-left">
+					<div class="form-group">
+						<label for="exampleInputEmail">Email address</label>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" name="InputEmail" id="exampleInputEmail" placeholder="Email address">
+							<input type="hidden" id="exampleInputId" name="UserID" />
+							<input type="hidden" id="exampleInputRole" name="UserRole" value="@action" />
+							<a href="javascript:();" class="input-group-addon" id="GetUserInfoByEmail">查找</a>
+						</div>
+						<label style="color:red;" id="addUserTip"></label>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputUserName">UserName</label>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="UserName" id="exampleInputUserName" placeholder="User Name" readonly>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputOSAT">OSAT</label>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="OSAT" id="exampleInputOSAT" placeholder="OSAT" readonly>
+					</div>
+					<div class="checkbox">
+						<label class="col-lg-6">
+							<input type="checkbox" name="checkboxActive" checked> Active
+						</label>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" id="addUserButton">确定</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				</div>
+			</form>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*$("#submitYes").modal("show");*@
+<div class="modal fade" id="addEmailNull" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h1></h1>
+			</div>
+			<div class="modal-body text-center">
+				邮箱不符合要求
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">YES</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*$("#submitYes").modal("show");*@
+<div class="modal fade" id="addUserNull" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h1></h1>
+			</div>
+			<div class="modal-body text-center">
+				找不到这个用户，请检查Email输入是否正确
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">YES</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

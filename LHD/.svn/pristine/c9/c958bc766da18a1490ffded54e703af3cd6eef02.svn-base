@@ -1,0 +1,59 @@
+.lia-compoent-lhd-comments { font-family: "Arial"; }
+.lia-compoent-lhd-comments h6 { margin: 0; font-size: 16px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+.lia-compoent-lhd-comments .comment-header { margin: 15px 0; }
+.lia-compoent-lhd-comments .comment-header .user-role { padding-right: 0; color: #fff; font-size: 13px; height: 18px; line-height: 18px; display: inline-block; padding-left: 5px; }
+.lia-compoent-lhd-comments .comment-header .user-role.OSAT { width: 50px; background: url("icon-vendor.png") no-repeat center center; background-size: 100% 100%; }
+.lia-compoent-lhd-comments .comment-header .user-role.PE { width: 40px; background: url("icon-pe.png") no-repeat center center; background-size: 100% 100%; }
+.lia-compoent-lhd-comments .comment-header .user-role.QA { width: 40px; background: url("icon-qa.png") no-repeat center center; background-size: 100% 100%; }
+.lia-compoent-lhd-comments .comment-header .user-role.PC { width: 40px; background: url("icon-pc.png") no-repeat center center; background-size: 100% 100%; }
+.lia-compoent-lhd-comments .comment-header .user-role.PEAdmin { width: 80px; background: url("icon-peadmin.png") no-repeat center center; background-size: 100% 100%; }
+.lia-compoent-lhd-comments .comment-header .user-role.QAAdmin { width: 80px; background: url("icon-qaadmin.png") no-repeat center center; background-size: 100% 100%; }
+.lia-compoent-lhd-comments .comment-header .user-role.PCAdmin { width: 80px; background: url("icon-pcadmin.png") no-repeat center center; background-size: 100% 100%; }
+.lia-compoent-lhd-comments .comment-header .user-email, .lia-compoent-lhd-comments .comment-header .date-time { padding-left: 15px; font-size: 14px; color: #747474; }
+.lia-compoent-lhd-comments .comment-header .is-new { background-color: #d15a46; content: "NEW"; color: #ffffff; padding: 1px 5px; font-size: 14px; margin-left: 20px; }
+.lia-compoent-lhd-comments .comment-header .dispose { background-color: #ccc; color: #ffffff; padding: 1px 5px; font-size: 14px; margin-left: 20px; }
+.lia-compoent-lhd-comments .comment-content { color: #000000; padding: 0 15px; }
+.lia-compoent-lhd-comments .comment-footer { padding: 20px 15px 5px 15px; border-bottom: 1px solid #cdcdcd; }
+.lia-compoent-lhd-comments .comment-footer .attachment { font-size: 14px; color: #0267ff; }
+.lia-compoent-lhd-comments .comment-footer .attachment:before { content: " "; background: url("icon-doc.png") no-repeat; width: 17px; height: 20px; display: inline-block; position: relative; top: 5px; padding-right: 5px; }
+.lia-compoent-lhd-comments .comment-header .comment-status {
+	background: url(icon-comment-status.png);
+	font-size: 10px;
+	color: #ffffff;
+	display: inline-block;
+	text-align: center;
+	margin-left: 5px;
+	height: 18px;
+    width: 71px;
+}
+
+
+
+.lia-compoent-lhd-comments .comment-header .comment-status.disposeStyle_3{
+	width: 69px;
+	background-position: 0 0;
+}
+.lia-compoent-lhd-comments .comment-header .comment-status.disposeStyle_2{
+	width: 86px;
+	background-position: 0 -20px;
+}
+.lia-compoent-lhd-comments .comment-header .comment-status.disposeStyle_0{
+	width: 78px;
+	background-position: 0 -40px;
+}
+.lia-compoent-lhd-comments .comment-header .comment-status.disposeStyle_1{
+	width: 115px;
+	background-position: 0 -60px;
+}
+.lia-compoent-lhd-comments .comment-header .comment-status.disposeStyle_5{
+	width: 143px;
+	background-position: 0 -80px;
+}
+.lia-compoent-lhd-comments .comment-header .comment-status.disposeStyle_253{
+	width: 111px;
+	background-position: 0 -100px;
+}
+.lia-compoent-lhd-comments .comment-header .comment-status.recall{
+	width: 68px;
+	background-position: 0 -120px;
+}

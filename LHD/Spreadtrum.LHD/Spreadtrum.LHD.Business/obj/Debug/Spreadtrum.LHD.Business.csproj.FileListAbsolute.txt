@@ -1,0 +1,17 @@
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\obj\Debug\Spreadtrum.LHD.Business.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\Spreadtrum.LHD.Business.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\Spreadtrum.LHD.Business.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\KaYi.Emails.Library.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\KaYi.FileSystem.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\KaYi.Utilities.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\Newtonsoft.Json.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\Spreadtrum.LHD.DAL.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\Spreadtrum.LHD.Entity.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\Spreadtrum.LHD.DAL.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Debug\Spreadtrum.LHD.Entity.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\obj\Debug\Spreadtrum.LHD.Business.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\obj\Debug\Spreadtrum.LHD.Business.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\obj\Debug\Spreadtrum.LHD.Business.csproj.CoreCompileInputs.cache
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\obj\Debug\Spreadtrum.LHD.Business.csproj.CopyComplete

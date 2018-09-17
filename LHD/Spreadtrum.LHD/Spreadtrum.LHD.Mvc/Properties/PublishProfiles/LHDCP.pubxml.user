@@ -1,0 +1,765 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\LHDPublish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Accounts/Content/css/login.css">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Accounts/Content/js/login.js">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Accounts/Views/Login/Index.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Accounts/Views/web.config">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/comments.css">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-comment-status.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-doc.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-pc.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-pcadmin.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-pe.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-peadmin.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-qa.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-qaadmin.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Comment/icon-vendor.png">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Details/Details.js">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Query/Query.css">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Query/Query.js">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Transform/Detail.js">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Transform/Transfrom.js">
+      <publishTime>01/17/2018 15:46:42</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Wafer/history.js">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Contents/Wafer/List.js">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Details/Index.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Details/mDetailsIndex.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Query/Index.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Query/mIndex.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/SWBin/Index.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Transform/Detail.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Transform/Index.cshtml">
+      <publishTime>01/17/2018 14:36:43</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Transform/mDetail.cshtml">
+      <publishTime>01/17/2018 15:38:34</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Transform/mIndex.cshtml">
+      <publishTime>01/17/2018 15:47:30</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Wafer/History.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Wafer/List.cshtml">
+      <publishTime>01/17/2018 15:17:55</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Wafer/mHistory.cshtml">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/Wafer/mList.cshtml">
+      <publishTime>01/17/2018 14:51:19</publishTime>
+    </File>
+    <File Include="Areas/Lots/Views/web.config">
+      <publishTime>01/17/2018 14:03:13</publishTime>
+    </File>
+    <File Include="Areas/Shared/masterPage.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Shared/masterPage2.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Shared/mMasterpage.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Shared/mNavigator.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Shared/Navigator.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Shared/web.config">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Systems/Views/web.config">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Users/Contents/UserManager.css">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Users/Contents/UserManager.js">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Users/Views/UserManager/Index.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Users/Views/UserManager/OSAT.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Areas/Users/Views/web.config">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/17/2018 14:06:30</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>01/17/2018 14:06:30</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>01/17/2018 14:15:46</publishTime>
+    </File>
+    <File Include="bin/KaYi.Database.dll">
+      <publishTime>01/22/2018 17:20:02</publishTime>
+    </File>
+    <File Include="bin/KaYi.Emails.Library.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/KaYi.FileSystem.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/KaYi.Services.EventServices.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/KaYi.Utilities.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/KaYi.Web.Infrastructure.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/17/2018 14:06:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/NPOI.dll">
+      <publishTime>01/17/2018 14:15:46</publishTime>
+    </File>
+    <File Include="bin/NPOI.OOXML.dll">
+      <publishTime>01/17/2018 14:15:46</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXml4Net.dll">
+      <publishTime>01/17/2018 14:15:46</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXmlFormats.dll">
+      <publishTime>01/17/2018 14:15:46</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/Spreadtrum.LHD.Business.dll">
+      <publishTime>01/22/2018 17:20:02</publishTime>
+    </File>
+    <File Include="bin/Spreadtrum.LHD.DAL.dll">
+      <publishTime>01/22/2018 17:20:02</publishTime>
+    </File>
+    <File Include="bin/Spreadtrum.LHD.Entity.dll">
+      <publishTime>01/22/2018 14:06:06</publishTime>
+    </File>
+    <File Include="bin/Spreadtrum.LHD.Mvc.dll">
+      <publishTime>01/22/2018 17:31:00</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>01/17/2018 14:08:06</publishTime>
+    </File>
+    <File Include="Content/animate.css">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap-theme.css">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap-theme.css.map">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap-theme.min.css">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap-theme.min.css.map">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap.css">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap.css.map">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap.min.css">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/bootstrap.min.css.map">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/BootstrapValidator/css/bootstrapValidator.css">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/BootstrapValidator/css/bootstrapValidator.min.css">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/BootstrapValidator/js/bootstrapValidator.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/BootstrapValidator/js/bootstrapValidator.min.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Content/Bootstrap/daterangepicker.css">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Content/Exports/ExportHistory.xml">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Exports/ExportLots.xml">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Exports/ExportSwbins.xml">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Exports/ExportTransform.xml">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/Exports/ExportWafer.xml">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/css/font-awesome.css">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/css/font-awesome.min.css">
+      <publishTime>01/17/2018 14:03:29</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/fonts/fontawesome-webfont.eot">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/fonts/fontawesome-webfont.svg">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/fonts/fontawesome-webfont.woff">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/fonts/FontAwesome.otf">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/animated.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/bordered-pulled.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/core.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/fixed-width.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/font-awesome.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/icons.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/larger.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/list.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/mixins.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/path.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/rotated-flipped.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/stacked.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/less/variables.less">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/font-awesome.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_animated.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_bordered-pulled.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_core.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_fixed-width.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_icons.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_larger.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_list.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_mixins.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_path.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_rotated-flipped.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_stacked.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/FontAwesome/scss/_variables.scss">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/KaYiDialog/KaYiDialog.js">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/KaYiGrid/css/KaYiGrid.css">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/KaYiGrid/js/KaYiGrids.js">
+      <publishTime>01/17/2018 14:03:33</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/KaYiLoader/js/KaYiLoader.js">
+      <publishTime>01/17/2018 14:03:34</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/KaYiPoster/KaYiPoster.js">
+      <publishTime>01/17/2018 14:03:34</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Pager/css/pager.css">
+      <publishTime>01/17/2018 14:03:34</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Pager/images/pager_icons.gif">
+      <publishTime>01/17/2018 14:03:34</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Pager/js/Pager.js">
+      <publishTime>01/17/2018 14:03:34</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/image/btnUpload.jpg">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/image/XPButtonNoText_160x22.png">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/Referenced/swfupload.cookies.js">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/Referenced/swfupload.js">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/Referenced/swfupload.proxy.js">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/Referenced/swfupload.queue.js">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/Referenced/swfupload.speed.js">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/Referenced/swfupload.swf">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/KaYiLib/Uploader/Referenced/swfupload_fp9.swf">
+      <publishTime>01/17/2018 14:03:36</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Emails/OSATNotification.aspx">
+      <publishTime>01/17/2018 14:03:37</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160622_062829.xls">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160713_092335.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160714_053740.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160715_043308.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160715_043314.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160726_061106.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160726_114213.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160726_121331.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160729_033452.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160802_093424.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160802_093438.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160823_104808.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160823_104818.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160823_104821.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160823_104826.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160823_104828.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160823_104832.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20160823_104837.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_014851.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_015053.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_015239.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_015420.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_015601.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_015743.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_031952.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_032128.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_032209.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_042154.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_111517.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_111602.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161123_111634.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161128_021820.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161128_022108.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161129_090221.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161129_090300.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Lots/LOTS_20161130_102422.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG239749302_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG249807709_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG330024659.01_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG330090278.01_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG440402484.01_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG440435203.01_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG450446658.01_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_FTG450496151.01_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_G1CM15.1B001_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_G1GS91.1A001_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_KWACG_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_KWHNA_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_KWLNY_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT_THY628.00_SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/Excels/Swbins/LOT__SWBin.xlsx">
+      <publishTime>01/17/2018 14:04:33</publishTime>
+    </File>
+    <File Include="Export/NPOI.CSS.dll">
+      <publishTime>01/17/2018 14:04:34</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/17/2018 14:04:45</publishTime>
+    </File>
+    <File Include="Help/UsersGuide.pdf">
+      <publishTime>01/17/2018 14:04:45</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/17/2018 14:15:49</publishTime>
+    </File>
+    <File Include="Scripts/Angular/angular-mocks.js">
+      <publishTime>01/17/2018 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/Angular/angular-sanitize.min.js">
+      <publishTime>01/17/2018 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/Angular/angular.js">
+      <publishTime>01/17/2018 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/Angular/angular.min.js">
+      <publishTime>01/17/2018 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/Angular/angular.min.js.map">
+      <publishTime>01/17/2018 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/Bootstrap/bootstrap-paginator.js">
+      <publishTime>01/17/2018 14:03:15</publishTime>
+    </File>
+    <File Include="Scripts/Bootstrap/bootstrap.js">
+      <publishTime>01/17/2018 14:03:15</publishTime>
+    </File>
+    <File Include="Scripts/Bootstrap/bootstrap.min.js">
+      <publishTime>01/17/2018 14:03:15</publishTime>
+    </File>
+    <File Include="Scripts/Bootstrap/daterangepicker.js">
+      <publishTime>01/17/2018 14:03:15</publishTime>
+    </File>
+    <File Include="Scripts/Bootstrap/moment.js">
+      <publishTime>01/17/2018 14:03:15</publishTime>
+    </File>
+    <File Include="Scripts/inspinia.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/jquery-2.2.3.js">
+      <publishTime>01/17/2018 14:03:24</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/jquery.metisMenu.js">
+      <publishTime>01/17/2018 14:03:24</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/jquery.slimscroll.min.js">
+      <publishTime>01/17/2018 14:03:24</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/AUTHORS.txt">
+      <publishTime>01/17/2018 14:03:21</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/external/jquery.datetimepicker.css">
+      <publishTime>01/17/2018 14:03:21</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/external/jquery.datetimepicker.full.js">
+      <publishTime>01/17/2018 14:03:21</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/index.html">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.css">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.js">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.min.css">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.min.js">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.structure.css">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.structure.min.css">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.theme.css">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/jquery-ui.theme.min.css">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/LICENSE.txt">
+      <publishTime>01/17/2018 14:03:21</publishTime>
+    </File>
+    <File Include="Scripts/Jquery/UI/package.json">
+      <publishTime>01/17/2018 14:03:23</publishTime>
+    </File>
+    <File Include="Scripts/masterPage.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/OtherBinDispose.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Scripts/public.js">
+      <publishTime>01/17/2018 14:03:27</publishTime>
+    </File>
+    <File Include="Views/errorPage.html">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Views/sprdLogin/Index.cshtml">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>01/17/2018 14:03:14</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/22/2018 17:20:05</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

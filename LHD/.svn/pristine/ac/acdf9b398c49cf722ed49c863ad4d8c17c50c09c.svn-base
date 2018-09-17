@@ -1,0 +1,1151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KaYi.FileSystem.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:KaYi.FileSystem.DAL.Fakes.ShimFileGateway">
+            <summary>Shim type of KaYi.FileSystem.DAL.FileGateway</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.#ctor(KaYi.FileSystem.DAL.FileGateway)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AddNewFile">
+            <summary>Sets the shim of FileGateway.AddNew(File newFile)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.Constructor">
+            <summary>Sets the shim of FileGateway.FileGateway()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.DeleteByFileIDString">
+            <summary>Sets the shim of FileGateway.DeleteByFileID(String FileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.ExistSameFileNameInFolderStringStringString">
+            <summary>Sets the shim of FileGateway.ExistSameFileNameInFolder(String parentID, String filename, String excludeFileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.GetFileByIDString">
+            <summary>Sets the shim of FileGateway.GetFileByID(String FileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.GetFileByQuickIDString">
+            <summary>Sets the shim of FileGateway.GetFileByQuickID(String quickID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.GetFilesByCatIdsStringStringStringStringStringIListOfStringFileStatesFileTypesStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesByCatIds(String ownerID, String keyword, String parentID, String startTime, String endTime, IList`1&lt;String&gt; catIds, FileStates fileStates, FileTypes fileType, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.GetFilesByStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.GetFilesByStringStringStringStringStringFileStatesFileTypesStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.GetFilesByUnknownStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesByUnknown(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.GetHotFilesInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetHotFiles(Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.InnerGetFilesByCatIdsStringStringStringStringStringIListOfStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.InnerGetFilesByCatIds(String ownerID, String keyword, String parentID, String startTime, String endTime, IList`1&lt;String&gt; catIds, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.InnerGetFilesByStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.InnerGetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.UpdateByPKFile">
+            <summary>Sets the shim of FileGateway.UpdateByPK(File objFile)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.AddNewFile">
+            <summary>Sets the shim of FileGateway.AddNew(File newFile)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.DeleteByFileIDString">
+            <summary>Sets the shim of FileGateway.DeleteByFileID(String FileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.ExistSameFileNameInFolderStringStringString">
+            <summary>Sets the shim of FileGateway.ExistSameFileNameInFolder(String parentID, String filename, String excludeFileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.GetFileByIDString">
+            <summary>Sets the shim of FileGateway.GetFileByID(String FileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.GetFileByQuickIDString">
+            <summary>Sets the shim of FileGateway.GetFileByQuickID(String quickID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.GetFilesByCatIdsStringStringStringStringStringIListOfStringFileStatesFileTypesStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesByCatIds(String ownerID, String keyword, String parentID, String startTime, String endTime, IList`1&lt;String&gt; catIds, FileStates fileStates, FileTypes fileType, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.GetFilesByStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.GetFilesByStringStringStringStringStringFileStatesFileTypesStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.GetFilesByUnknownStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetFilesByUnknown(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.GetHotFilesInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.GetHotFiles(Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.InnerGetFilesByCatIdsStringStringStringStringStringIListOfStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.InnerGetFilesByCatIds(String ownerID, String keyword, String parentID, String startTime, String endTime, IList`1&lt;String&gt; catIds, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.InnerGetFilesByStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileGateway.InnerGetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileGateway.AllInstances.UpdateByPKFile">
+            <summary>Sets the shim of FileGateway.UpdateByPK(File objFile)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway">
+            <summary>Shim type of KaYi.FileSystem.DAL.FileHitGateway</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.#ctor(KaYi.FileSystem.DAL.FileHitGateway)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.AddNewFileHit">
+            <summary>Sets the shim of FileHitGateway.AddNew(FileHit newFileHit)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.Constructor">
+            <summary>Sets the shim of FileHitGateway.FileHitGateway()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.DeleteByFileHitIDString">
+            <summary>Sets the shim of FileHitGateway.DeleteByFileHitID(String FileHitID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.GetFileHitByIDString">
+            <summary>Sets the shim of FileHitGateway.GetFileHitByID(String FileHitID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.GetFileHitsByString">
+            <summary>Sets the shim of FileHitGateway.GetFileHitsBy(String FileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.UpdateByPKFileHit">
+            <summary>Sets the shim of FileHitGateway.UpdateByPK(FileHit objFileHit)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.AllInstances.AddNewFileHit">
+            <summary>Sets the shim of FileHitGateway.AddNew(FileHit newFileHit)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.AllInstances.DeleteByFileHitIDString">
+            <summary>Sets the shim of FileHitGateway.DeleteByFileHitID(String FileHitID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.AllInstances.GetFileHitByIDString">
+            <summary>Sets the shim of FileHitGateway.GetFileHitByID(String FileHitID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.AllInstances.GetFileHitsByString">
+            <summary>Sets the shim of FileHitGateway.GetFileHitsBy(String FileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.ShimFileHitGateway.AllInstances.UpdateByPKFileHit">
+            <summary>Sets the shim of FileHitGateway.UpdateByPK(FileHit objFileHit)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.DAL.Fakes.StubFileGateway">
+            <summary>Stub type of KaYi.FileSystem.DAL.FileGateway</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.StubFileGateway.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.StubFileGateway.InitializeStub">
+            <summary>Initializes a new instance of type StubFileGateway</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.StubFileGateway.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.StubFileGateway.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.StubFileGateway.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.DAL.Fakes.StubFileHitGateway">
+            <summary>Stub type of KaYi.FileSystem.DAL.FileHitGateway</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.StubFileHitGateway.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.DAL.Fakes.StubFileHitGateway.InitializeStub">
+            <summary>Initializes a new instance of type StubFileHitGateway</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.StubFileHitGateway.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.StubFileHitGateway.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.DAL.Fakes.StubFileHitGateway.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.ShimFile">
+            <summary>Shim type of KaYi.FileSystem.Model.File</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFile.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFile.#ctor(KaYi.FileSystem.Model.File)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFile.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFile.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.CategoryQueryIDsGet">
+            <summary>Sets the shim of File.get_CategoryQueryIDs()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.CategoryQueryIDsSetString">
+            <summary>Sets the shim of File.set_CategoryQueryIDs(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ClientIPGet">
+            <summary>Sets the shim of File.get_ClientIP()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ClientIPSetString">
+            <summary>Sets the shim of File.set_ClientIP(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.Constructor">
+            <summary>Sets the shim of File.File()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ContentTypeGet">
+            <summary>Sets the shim of File.get_ContentType()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ContentTypeSetString">
+            <summary>Sets the shim of File.set_ContentType(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ConvertToPDFSuccessedGet">
+            <summary>Sets the shim of File.get_ConvertToPDFSuccessed()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ConvertToPDFSuccessedSetBoolean">
+            <summary>Sets the shim of File.set_ConvertToPDFSuccessed(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.CreateTimeGet">
+            <summary>Sets the shim of File.get_CreateTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.CreateTimeSetDateTime">
+            <summary>Sets the shim of File.set_CreateTime(DateTime value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.DisplayInNotificationsGet">
+            <summary>Sets the shim of File.get_DisplayInNotifications()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.DisplayInNotificationsSetBoolean">
+            <summary>Sets the shim of File.set_DisplayInNotifications(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.DownloadAfterPermitGet">
+            <summary>Sets the shim of File.get_DownloadAfterPermit()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.DownloadAfterPermitSetBoolean">
+            <summary>Sets the shim of File.set_DownloadAfterPermit(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.DownloadTimesGet">
+            <summary>Sets the shim of File.get_DownloadTimes()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.DownloadTimesSetInt32">
+            <summary>Sets the shim of File.set_DownloadTimes(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ExtendFileNameGet">
+            <summary>Sets the shim of File.get_ExtendFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ExtendFileNameSetString">
+            <summary>Sets the shim of File.set_ExtendFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileIDGet">
+            <summary>Sets the shim of File.get_FileID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileIDSetString">
+            <summary>Sets the shim of File.set_FileID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileSizeGet">
+            <summary>Sets the shim of File.get_FileSize()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileSizeSetInt64">
+            <summary>Sets the shim of File.set_FileSize(Int64 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileStateGet">
+            <summary>Sets the shim of File.get_FileState()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileStateSetFileStates">
+            <summary>Sets the shim of File.set_FileState(FileStates value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileTypeGet">
+            <summary>Sets the shim of File.get_FileType()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FileTypeSetFileTypes">
+            <summary>Sets the shim of File.set_FileType(FileTypes value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FullPathForDisplayGet">
+            <summary>Sets the shim of File.get_FullPathForDisplay()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.FullPathForDisplaySetString">
+            <summary>Sets the shim of File.set_FullPathForDisplay(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.KeywordGet">
+            <summary>Sets the shim of File.get_Keyword()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.KeywordSetString">
+            <summary>Sets the shim of File.set_Keyword(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.LargeThumbnailGet">
+            <summary>Sets the shim of File.get_LargeThumbnail()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.LargeThumbnailSetString">
+            <summary>Sets the shim of File.set_LargeThumbnail(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.MemoGet">
+            <summary>Sets the shim of File.get_Memo()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.MemoSetString">
+            <summary>Sets the shim of File.set_Memo(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OpenedTimesGet">
+            <summary>Sets the shim of File.get_OpenedTimes()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OpenedTimesSetInt32">
+            <summary>Sets the shim of File.set_OpenedTimes(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OriginalFileNameGet">
+            <summary>Sets the shim of File.get_OriginalFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OriginalFileNameSetString">
+            <summary>Sets the shim of File.set_OriginalFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OwnerIDGet">
+            <summary>Sets the shim of File.get_OwnerID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OwnerIDSetString">
+            <summary>Sets the shim of File.set_OwnerID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OwnerNameGet">
+            <summary>Sets the shim of File.get_OwnerName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.OwnerNameSetString">
+            <summary>Sets the shim of File.set_OwnerName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PDFAbsoluteFileNameGet">
+            <summary>Sets the shim of File.get_PDFAbsoluteFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PDFAbsoluteFileNameSetString">
+            <summary>Sets the shim of File.set_PDFAbsoluteFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PDFAbsolutePathGet">
+            <summary>Sets the shim of File.get_PDFAbsolutePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PDFAbsolutePathSetString">
+            <summary>Sets the shim of File.set_PDFAbsolutePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PDFRelativePathGet">
+            <summary>Sets the shim of File.get_PDFRelativePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PDFRelativePathSetString">
+            <summary>Sets the shim of File.set_PDFRelativePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ParentIDGet">
+            <summary>Sets the shim of File.get_ParentID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ParentIDSetString">
+            <summary>Sets the shim of File.set_ParentID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PayLevelGet">
+            <summary>Sets the shim of File.get_PayLevel()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PayLevelSetInt32">
+            <summary>Sets the shim of File.set_PayLevel(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PreviewAfterPermitGet">
+            <summary>Sets the shim of File.get_PreviewAfterPermit()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PreviewAfterPermitSetBoolean">
+            <summary>Sets the shim of File.set_PreviewAfterPermit(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PublicDownloadGet">
+            <summary>Sets the shim of File.get_PublicDownload()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PublicDownloadSetBoolean">
+            <summary>Sets the shim of File.set_PublicDownload(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PublicReviewGet">
+            <summary>Sets the shim of File.get_PublicReview()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.PublicReviewSetBoolean">
+            <summary>Sets the shim of File.set_PublicReview(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.QuickIDGet">
+            <summary>Sets the shim of File.get_QuickID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.QuickIDSetString">
+            <summary>Sets the shim of File.set_QuickID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ReadCountGet">
+            <summary>Sets the shim of File.get_ReadCount()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ReadCountSetInt32">
+            <summary>Sets the shim of File.set_ReadCount(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.RelativeProjectNamesGet">
+            <summary>Sets the shim of File.get_RelativeProjectNames()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.RelativeProjectNamesSetString">
+            <summary>Sets the shim of File.set_RelativeProjectNames(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.RelativeUserNamesGet">
+            <summary>Sets the shim of File.get_RelativeUserNames()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.RelativeUserNamesSetString">
+            <summary>Sets the shim of File.set_RelativeUserNames(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.SecretLevelGet">
+            <summary>Sets the shim of File.get_SecretLevel()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.SecretLevelSetInt32">
+            <summary>Sets the shim of File.set_SecretLevel(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.SequenceGet">
+            <summary>Sets the shim of File.get_Sequence()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.SequenceSetInt32">
+            <summary>Sets the shim of File.set_Sequence(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.StorageAbsoluteFileNameGet">
+            <summary>Sets the shim of File.get_StorageAbsoluteFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.StorageAbsoluteFileNameSetString">
+            <summary>Sets the shim of File.set_StorageAbsoluteFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.StoreAbsolutePathGet">
+            <summary>Sets the shim of File.get_StoreAbsolutePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.StoreAbsolutePathSetString">
+            <summary>Sets the shim of File.set_StoreAbsolutePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.StoreRelativePathGet">
+            <summary>Sets the shim of File.get_StoreRelativePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.StoreRelativePathSetString">
+            <summary>Sets the shim of File.set_StoreRelativePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TagGet">
+            <summary>Sets the shim of File.get_Tag()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TagSetString">
+            <summary>Sets the shim of File.set_Tag(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ThumbnailGet">
+            <summary>Sets the shim of File.get_Thumbnail()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.ThumbnailSetString">
+            <summary>Sets the shim of File.set_Thumbnail(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TitleGet">
+            <summary>Sets the shim of File.get_Title()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TitleSetString">
+            <summary>Sets the shim of File.set_Title(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TokenIDGet">
+            <summary>Sets the shim of File.get_TokenID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TokenIDSetString">
+            <summary>Sets the shim of File.set_TokenID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TotalFilesGet">
+            <summary>Sets the shim of File.get_TotalFiles()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TotalFilesSetInt32">
+            <summary>Sets the shim of File.set_TotalFiles(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TotalFoldersGet">
+            <summary>Sets the shim of File.get_TotalFolders()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TotalFoldersSetInt32">
+            <summary>Sets the shim of File.set_TotalFolders(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TotalSizeGet">
+            <summary>Sets the shim of File.get_TotalSize()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.TotalSizeSetInt64">
+            <summary>Sets the shim of File.set_TotalSize(Int64 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.UploaderIDGet">
+            <summary>Sets the shim of File.get_UploaderID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.UploaderIDSetString">
+            <summary>Sets the shim of File.set_UploaderID(String value)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.CategoryQueryIDsGet">
+            <summary>Sets the shim of File.get_CategoryQueryIDs()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.CategoryQueryIDsSetString">
+            <summary>Sets the shim of File.set_CategoryQueryIDs(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ClientIPGet">
+            <summary>Sets the shim of File.get_ClientIP()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ClientIPSetString">
+            <summary>Sets the shim of File.set_ClientIP(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ContentTypeGet">
+            <summary>Sets the shim of File.get_ContentType()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ContentTypeSetString">
+            <summary>Sets the shim of File.set_ContentType(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ConvertToPDFSuccessedGet">
+            <summary>Sets the shim of File.get_ConvertToPDFSuccessed()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ConvertToPDFSuccessedSetBoolean">
+            <summary>Sets the shim of File.set_ConvertToPDFSuccessed(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.CreateTimeGet">
+            <summary>Sets the shim of File.get_CreateTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.CreateTimeSetDateTime">
+            <summary>Sets the shim of File.set_CreateTime(DateTime value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.DisplayInNotificationsGet">
+            <summary>Sets the shim of File.get_DisplayInNotifications()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.DisplayInNotificationsSetBoolean">
+            <summary>Sets the shim of File.set_DisplayInNotifications(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.DownloadAfterPermitGet">
+            <summary>Sets the shim of File.get_DownloadAfterPermit()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.DownloadAfterPermitSetBoolean">
+            <summary>Sets the shim of File.set_DownloadAfterPermit(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.DownloadTimesGet">
+            <summary>Sets the shim of File.get_DownloadTimes()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.DownloadTimesSetInt32">
+            <summary>Sets the shim of File.set_DownloadTimes(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ExtendFileNameGet">
+            <summary>Sets the shim of File.get_ExtendFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ExtendFileNameSetString">
+            <summary>Sets the shim of File.set_ExtendFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileIDGet">
+            <summary>Sets the shim of File.get_FileID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileIDSetString">
+            <summary>Sets the shim of File.set_FileID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileSizeGet">
+            <summary>Sets the shim of File.get_FileSize()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileSizeSetInt64">
+            <summary>Sets the shim of File.set_FileSize(Int64 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileStateGet">
+            <summary>Sets the shim of File.get_FileState()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileStateSetFileStates">
+            <summary>Sets the shim of File.set_FileState(FileStates value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileTypeGet">
+            <summary>Sets the shim of File.get_FileType()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FileTypeSetFileTypes">
+            <summary>Sets the shim of File.set_FileType(FileTypes value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FullPathForDisplayGet">
+            <summary>Sets the shim of File.get_FullPathForDisplay()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.FullPathForDisplaySetString">
+            <summary>Sets the shim of File.set_FullPathForDisplay(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.KeywordGet">
+            <summary>Sets the shim of File.get_Keyword()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.KeywordSetString">
+            <summary>Sets the shim of File.set_Keyword(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.LargeThumbnailGet">
+            <summary>Sets the shim of File.get_LargeThumbnail()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.LargeThumbnailSetString">
+            <summary>Sets the shim of File.set_LargeThumbnail(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.MemoGet">
+            <summary>Sets the shim of File.get_Memo()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.MemoSetString">
+            <summary>Sets the shim of File.set_Memo(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OpenedTimesGet">
+            <summary>Sets the shim of File.get_OpenedTimes()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OpenedTimesSetInt32">
+            <summary>Sets the shim of File.set_OpenedTimes(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OriginalFileNameGet">
+            <summary>Sets the shim of File.get_OriginalFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OriginalFileNameSetString">
+            <summary>Sets the shim of File.set_OriginalFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OwnerIDGet">
+            <summary>Sets the shim of File.get_OwnerID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OwnerIDSetString">
+            <summary>Sets the shim of File.set_OwnerID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OwnerNameGet">
+            <summary>Sets the shim of File.get_OwnerName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.OwnerNameSetString">
+            <summary>Sets the shim of File.set_OwnerName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PDFAbsoluteFileNameGet">
+            <summary>Sets the shim of File.get_PDFAbsoluteFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PDFAbsoluteFileNameSetString">
+            <summary>Sets the shim of File.set_PDFAbsoluteFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PDFAbsolutePathGet">
+            <summary>Sets the shim of File.get_PDFAbsolutePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PDFAbsolutePathSetString">
+            <summary>Sets the shim of File.set_PDFAbsolutePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PDFRelativePathGet">
+            <summary>Sets the shim of File.get_PDFRelativePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PDFRelativePathSetString">
+            <summary>Sets the shim of File.set_PDFRelativePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ParentIDGet">
+            <summary>Sets the shim of File.get_ParentID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ParentIDSetString">
+            <summary>Sets the shim of File.set_ParentID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PayLevelGet">
+            <summary>Sets the shim of File.get_PayLevel()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PayLevelSetInt32">
+            <summary>Sets the shim of File.set_PayLevel(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PreviewAfterPermitGet">
+            <summary>Sets the shim of File.get_PreviewAfterPermit()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PreviewAfterPermitSetBoolean">
+            <summary>Sets the shim of File.set_PreviewAfterPermit(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PublicDownloadGet">
+            <summary>Sets the shim of File.get_PublicDownload()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PublicDownloadSetBoolean">
+            <summary>Sets the shim of File.set_PublicDownload(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PublicReviewGet">
+            <summary>Sets the shim of File.get_PublicReview()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.PublicReviewSetBoolean">
+            <summary>Sets the shim of File.set_PublicReview(Boolean value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.QuickIDGet">
+            <summary>Sets the shim of File.get_QuickID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.QuickIDSetString">
+            <summary>Sets the shim of File.set_QuickID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ReadCountGet">
+            <summary>Sets the shim of File.get_ReadCount()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ReadCountSetInt32">
+            <summary>Sets the shim of File.set_ReadCount(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.RelativeProjectNamesGet">
+            <summary>Sets the shim of File.get_RelativeProjectNames()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.RelativeProjectNamesSetString">
+            <summary>Sets the shim of File.set_RelativeProjectNames(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.RelativeUserNamesGet">
+            <summary>Sets the shim of File.get_RelativeUserNames()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.RelativeUserNamesSetString">
+            <summary>Sets the shim of File.set_RelativeUserNames(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.SecretLevelGet">
+            <summary>Sets the shim of File.get_SecretLevel()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.SecretLevelSetInt32">
+            <summary>Sets the shim of File.set_SecretLevel(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.SequenceGet">
+            <summary>Sets the shim of File.get_Sequence()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.SequenceSetInt32">
+            <summary>Sets the shim of File.set_Sequence(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.StorageAbsoluteFileNameGet">
+            <summary>Sets the shim of File.get_StorageAbsoluteFileName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.StorageAbsoluteFileNameSetString">
+            <summary>Sets the shim of File.set_StorageAbsoluteFileName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.StoreAbsolutePathGet">
+            <summary>Sets the shim of File.get_StoreAbsolutePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.StoreAbsolutePathSetString">
+            <summary>Sets the shim of File.set_StoreAbsolutePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.StoreRelativePathGet">
+            <summary>Sets the shim of File.get_StoreRelativePath()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.StoreRelativePathSetString">
+            <summary>Sets the shim of File.set_StoreRelativePath(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TagGet">
+            <summary>Sets the shim of File.get_Tag()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TagSetString">
+            <summary>Sets the shim of File.set_Tag(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ThumbnailGet">
+            <summary>Sets the shim of File.get_Thumbnail()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.ThumbnailSetString">
+            <summary>Sets the shim of File.set_Thumbnail(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TitleGet">
+            <summary>Sets the shim of File.get_Title()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TitleSetString">
+            <summary>Sets the shim of File.set_Title(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TokenIDGet">
+            <summary>Sets the shim of File.get_TokenID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TokenIDSetString">
+            <summary>Sets the shim of File.set_TokenID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TotalFilesGet">
+            <summary>Sets the shim of File.get_TotalFiles()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TotalFilesSetInt32">
+            <summary>Sets the shim of File.set_TotalFiles(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TotalFoldersGet">
+            <summary>Sets the shim of File.get_TotalFolders()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TotalFoldersSetInt32">
+            <summary>Sets the shim of File.set_TotalFolders(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TotalSizeGet">
+            <summary>Sets the shim of File.get_TotalSize()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.TotalSizeSetInt64">
+            <summary>Sets the shim of File.set_TotalSize(Int64 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.UploaderIDGet">
+            <summary>Sets the shim of File.get_UploaderID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFile.AllInstances.UploaderIDSetString">
+            <summary>Sets the shim of File.set_UploaderID(String value)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.ShimFileHit">
+            <summary>Shim type of KaYi.FileSystem.Model.FileHit</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFileHit.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFileHit.#ctor(KaYi.FileSystem.Model.FileHit)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFileHit.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFileHit.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.ClientIDGet">
+            <summary>Sets the shim of FileHit.get_ClientID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.ClientIDSetString">
+            <summary>Sets the shim of FileHit.set_ClientID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.Constructor">
+            <summary>Sets the shim of FileHit.FileHit()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.CreateTimeGet">
+            <summary>Sets the shim of FileHit.get_CreateTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.CreateTimeSetDateTime">
+            <summary>Sets the shim of FileHit.set_CreateTime(DateTime value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.FileIDGet">
+            <summary>Sets the shim of FileHit.get_FileID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.FileIDSetString">
+            <summary>Sets the shim of FileHit.set_FileID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.HitIDGet">
+            <summary>Sets the shim of FileHit.get_HitID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.HitIDSetString">
+            <summary>Sets the shim of FileHit.set_HitID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.HitTimeGet">
+            <summary>Sets the shim of FileHit.get_HitTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.HitTimeSetDateTime">
+            <summary>Sets the shim of FileHit.set_HitTime(DateTime value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.HitTypeGet">
+            <summary>Sets the shim of FileHit.get_HitType()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.HitTypeSetString">
+            <summary>Sets the shim of FileHit.set_HitType(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.SessionIDGet">
+            <summary>Sets the shim of FileHit.get_SessionID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.SessionIDSetString">
+            <summary>Sets the shim of FileHit.set_SessionID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.UpdateStampGet">
+            <summary>Sets the shim of FileHit.get_UpdateStamp()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.UpdateStampSetString">
+            <summary>Sets the shim of FileHit.set_UpdateStamp(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.UpdateTimeGet">
+            <summary>Sets the shim of FileHit.get_UpdateTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.UpdateTimeSetDateTime">
+            <summary>Sets the shim of FileHit.set_UpdateTime(DateTime value)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.ClientIDGet">
+            <summary>Sets the shim of FileHit.get_ClientID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.ClientIDSetString">
+            <summary>Sets the shim of FileHit.set_ClientID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.CreateTimeGet">
+            <summary>Sets the shim of FileHit.get_CreateTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.CreateTimeSetDateTime">
+            <summary>Sets the shim of FileHit.set_CreateTime(DateTime value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.FileIDGet">
+            <summary>Sets the shim of FileHit.get_FileID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.FileIDSetString">
+            <summary>Sets the shim of FileHit.set_FileID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.HitIDGet">
+            <summary>Sets the shim of FileHit.get_HitID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.HitIDSetString">
+            <summary>Sets the shim of FileHit.set_HitID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.HitTimeGet">
+            <summary>Sets the shim of FileHit.get_HitTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.HitTimeSetDateTime">
+            <summary>Sets the shim of FileHit.set_HitTime(DateTime value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.HitTypeGet">
+            <summary>Sets the shim of FileHit.get_HitType()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.HitTypeSetString">
+            <summary>Sets the shim of FileHit.set_HitType(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.SessionIDGet">
+            <summary>Sets the shim of FileHit.get_SessionID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.SessionIDSetString">
+            <summary>Sets the shim of FileHit.set_SessionID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.UpdateStampGet">
+            <summary>Sets the shim of FileHit.get_UpdateStamp()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.UpdateStampSetString">
+            <summary>Sets the shim of FileHit.set_UpdateStamp(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.UpdateTimeGet">
+            <summary>Sets the shim of FileHit.get_UpdateTime()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFileHit.AllInstances.UpdateTimeSetDateTime">
+            <summary>Sets the shim of FileHit.set_UpdateTime(DateTime value)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.ShimFolderSummary">
+            <summary>Shim type of KaYi.FileSystem.Model.FolderSummary</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.#ctor(KaYi.FileSystem.Model.FolderSummary)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.Constructor">
+            <summary>Sets the shim of FolderSummary.FolderSummary()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.FilesInFolderGet">
+            <summary>Sets the shim of FolderSummary.get_FilesInFolder()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.FilesInFolderSetInt32">
+            <summary>Sets the shim of FolderSummary.set_FilesInFolder(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.FolderIDGet">
+            <summary>Sets the shim of FolderSummary.get_FolderID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.FolderIDSetString">
+            <summary>Sets the shim of FolderSummary.set_FolderID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.FolderNameGet">
+            <summary>Sets the shim of FolderSummary.get_FolderName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.FolderNameSetString">
+            <summary>Sets the shim of FolderSummary.set_FolderName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.SimpleSizeDescriptionGet">
+            <summary>Sets the shim of FolderSummary.get_SimpleSizeDescription()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.SimpleSizeDescriptionSetString">
+            <summary>Sets the shim of FolderSummary.set_SimpleSizeDescription(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.TotalFilesGet">
+            <summary>Sets the shim of FolderSummary.get_TotalFiles()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.TotalFilesSetInt32">
+            <summary>Sets the shim of FolderSummary.set_TotalFiles(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.TotalSizeGet">
+            <summary>Sets the shim of FolderSummary.get_TotalSize()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.TotalSizeSetUInt64">
+            <summary>Sets the shim of FolderSummary.set_TotalSize(UInt64 value)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.FilesInFolderGet">
+            <summary>Sets the shim of FolderSummary.get_FilesInFolder()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.FilesInFolderSetInt32">
+            <summary>Sets the shim of FolderSummary.set_FilesInFolder(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.FolderIDGet">
+            <summary>Sets the shim of FolderSummary.get_FolderID()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.FolderIDSetString">
+            <summary>Sets the shim of FolderSummary.set_FolderID(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.FolderNameGet">
+            <summary>Sets the shim of FolderSummary.get_FolderName()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.FolderNameSetString">
+            <summary>Sets the shim of FolderSummary.set_FolderName(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.SimpleSizeDescriptionGet">
+            <summary>Sets the shim of FolderSummary.get_SimpleSizeDescription()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.SimpleSizeDescriptionSetString">
+            <summary>Sets the shim of FolderSummary.set_SimpleSizeDescription(String value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.TotalFilesGet">
+            <summary>Sets the shim of FolderSummary.get_TotalFiles()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.TotalFilesSetInt32">
+            <summary>Sets the shim of FolderSummary.set_TotalFiles(Int32 value)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.TotalSizeGet">
+            <summary>Sets the shim of FolderSummary.get_TotalSize()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.ShimFolderSummary.AllInstances.TotalSizeSetUInt64">
+            <summary>Sets the shim of FolderSummary.set_TotalSize(UInt64 value)</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.StubFile">
+            <summary>Stub type of KaYi.FileSystem.Model.File</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.StubFile.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.StubFile.InitializeStub">
+            <summary>Initializes a new instance of type StubFile</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFile.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFile.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFile.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.StubFileHit">
+            <summary>Stub type of KaYi.FileSystem.Model.FileHit</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.StubFileHit.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.StubFileHit.InitializeStub">
+            <summary>Initializes a new instance of type StubFileHit</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFileHit.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFileHit.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFileHit.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Model.Fakes.StubFolderSummary">
+            <summary>Stub type of KaYi.FileSystem.Model.FolderSummary</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.StubFolderSummary.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Model.Fakes.StubFolderSummary.InitializeStub">
+            <summary>Initializes a new instance of type StubFolderSummary</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFolderSummary.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFolderSummary.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Model.Fakes.StubFolderSummary.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:KaYi.FileSystem.Services.Fakes.ShimFileSystemService">
+            <summary>Shim type of KaYi.FileSystem.Services.FileSystemService</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.AddFileFile">
+            <summary>Sets the shim of FileSystemService.AddFile(File file)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.CopyToFolderStringStringString">
+            <summary>Sets the shim of FileSystemService.CopyToFolder(String accountID, String fileID, String destFolderID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.CreateFolderInStringStringStringString">
+            <summary>Sets the shim of FileSystemService.CreateFolderIn(String ownerID, String parentFolderID, String newFolderID, String folderName)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.CreateFolderWithQuickIDStringStringStringStringString">
+            <summary>Sets the shim of FileSystemService.CreateFolderWithQuickID(String ownerID, String parentFolderID, String newFolderID, String folderName, String quickID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.DeleteFileStringString">
+            <summary>Sets the shim of FileSystemService.DeleteFile(String accountID, String fileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.ExistSameFileNameInFolderStringStringString">
+            <summary>Sets the shim of FileSystemService.ExistSameFileNameInFolder(String parentID, String filename, String excludeFileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetAllFilesInFolderString">
+            <summary>Sets the shim of FileSystemService.GetAllFilesInFolder(String folderID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFileByIDString">
+            <summary>Sets the shim of FileSystemService.GetFileByID(String fileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFileByIDWithExtendPropertiesString">
+            <summary>Sets the shim of FileSystemService.GetFileByIDWithExtendProperties(String fileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFileByQuickIDString">
+            <summary>Sets the shim of FileSystemService.GetFileByQuickID(String quickID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFilePathString">
+            <summary>Sets the shim of FileSystemService.GetFilePath(String fileID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFilesByCatIdsStringStringStringStringStringIListOfStringFileStatesFileTypesStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileSystemService.GetFilesByCatIds(String ownerID, String keyword, String parentID, String startTime, String endTime, IList`1&lt;String&gt; catIds, FileStates fileState, FileTypes fileType, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFilesByStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileSystemService.GetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFilesByStringStringStringStringStringFileStatesFileTypesStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileSystemService.GetFilesBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileState, FileTypes fileType, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFilesWithoutExtendPropertyByStringStringStringStringStringFileStatesFileTypesBooleanBooleanBooleanBooleanBooleanStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileSystemService.GetFilesWithoutExtendPropertyBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileStates, FileTypes fileType, Boolean displayInNotificationsOnly, Boolean publicReviewOnly, Boolean publicDownloadOnly, Boolean previewAfterPermitOnly, Boolean downloadAfterPermitOnly, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetFilesWithoutExtendPropertyByStringStringStringStringStringFileStatesFileTypesStringBooleanInt32Int32Int32Out">
+            <summary>Sets the shim of FileSystemService.GetFilesWithoutExtendPropertyBy(String ownerID, String keyword, String parentID, String startTime, String endTime, FileStates fileState, FileTypes fileType, String orderBy, Boolean desc, Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetHotFilesInt32Int32Int32Out">
+            <summary>Sets the shim of FileSystemService.GetHotFiles(Int32 pageIndex, Int32 pageSize, Int32&amp; recordCount)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetParentFoldersString">
+            <summary>Sets the shim of FileSystemService.GetParentFolders(String currentFolderID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.GetUserFolderStringString">
+            <summary>Sets the shim of FileSystemService.GetUserFolder(String accountID, String folder)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.HitFileStringStringStringString">
+            <summary>Sets the shim of FileSystemService.HitFile(String fileID, String sessionID, String clientID, String hitType)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.MoveToFolderStringStringString">
+            <summary>Sets the shim of FileSystemService.MoveToFolder(String accountID, String fileID, String destFolderID)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.ReadExtendPropertiesOfFileFile">
+            <summary>Sets the shim of FileSystemService.ReadExtendPropertiesOfFile(File file)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.ReadExtendPropertiesOfFilesIListOfFile">
+            <summary>Sets the shim of FileSystemService.ReadExtendPropertiesOfFiles(IList`1&lt;File&gt; files)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.RenameFileStringStringString">
+            <summary>Sets the shim of FileSystemService.RenameFile(String accountID, String fileID, String newFolderName)</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.StaticConstructor">
+            <summary>Sets the shim of FileSystemService.FileSystemService()</summary>
+        </member>
+        <member name="P:KaYi.FileSystem.Services.Fakes.ShimFileSystemService.UpdateFileFile">
+            <summary>Sets the shim of FileSystemService.UpdateFile(File file)</summary>
+        </member>
+    </members>
+</doc>

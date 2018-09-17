@@ -1,0 +1,100 @@
+﻿.pagerContainer
+{
+    background-color:#fff5cf;
+    height:21px;
+    width:100%!important;
+    border-top:1px solid #dedede;
+    border-bottom:2px solid #dedede;
+    padding-top:6px;        
+}
+
+.pager
+{
+    width:auto;    
+    float:right;                
+    
+}
+.pager a ,.pager span
+{
+    display:block;        
+    float:left;
+    font-size:12px;
+    text-decoration: none;   
+    vertical-align:middle; 
+    min-height:18px;
+    min-width:8px;
+    margin-right:7px;    
+    background-image:url(/ThirdPartyPlugins/SwetSoftware/Pager/images/pager_icons.gif);
+    background-repeat:no-repeat;
+}
+.pager a:hover, .pager a:focus, .pager a:active {
+	background-color:#E2EFFF;
+	text-decoration:underline;
+}
+.pager a
+{
+    color: #329ECC;
+    text-decoration: none;
+}
+.pagerUnavailableFirstPage  
+{     
+    background-position:-12px 5px;
+}
+.pagerFirstPage 
+{
+     background-position:0px 5px;    
+}        
+
+.pagerPrevPageNotAvailable
+{
+    background-position:-83px 5px;    
+}
+.pagerPreviousPage
+{
+    background-position:-71px 5px;    
+}        
+
+.pagerNextPageNotAvailable
+{
+    background-position:-61px 5px;    
+}
+.pagerNextPage 
+{
+    background-position:-49px 5px;    
+}
+.pagerLastPage 
+{
+    background-position:-22px 5px;  
+}
+.pagerUnavailableLastPage
+{
+    background-position:-34px 5px;  
+}   
+.currentPage
+{
+    background-position:-100px -100px;
+    background-color: #266DBB;color: white;
+    padding-left:5px;
+    padding-right:5px;
+    height:18px!important;
+    padding-top:0px!important;
+    vertical-align:top;
+    font-family:'Courier New';
+}
+.pagerToPage
+{
+    background-position:-100px -100px;
+    font-family:'Courier New';
+}
+
+.morePages 
+{
+    display:block;
+    padding-left:5px;
+    padding-right:5px;
+    height:18px!important;
+    padding-top:0px!important;
+    width:12px;
+    float:left;    
+    background-image:none!important;
+}

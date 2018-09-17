@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+       <script>
+           var message = '@ViewBag.Message';
+           if (message == 'ToLogin') {
+               window.location.href = '/Accounts/Login';
+           } else {
+               if(message == "isFT"){
+                   var ua = window.navigator.userAgent.toLowerCase();
+                   if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+                       window.location.href = '/Lots/Query/LotDispose';
+                   }
+                   else if (ua.indexOf("iphone") > 0 || ua.indexOf("android") > 0) {
+                       window.location.href = '/Lots/Query/mLotDispose';
+                   }
+               } else {
+                   var ua = window.navigator.userAgent.toLowerCase();
+                   if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+                       window.location.href = '/Lots/Transform';
+                   }
+                   else if (ua.indexOf("iphone") > 0 || ua.indexOf("android") > 0) {
+                       window.location.href = '/Lots/Transform/mIndex';
+                   }
+                   //window.location.href = '/Lots/Transform';
+               }
+           }
+       </script>
+    </div>
+</body>
+</html>

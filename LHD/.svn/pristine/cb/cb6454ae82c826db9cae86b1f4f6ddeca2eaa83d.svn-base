@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<table name="ExportHistory" titleCss="font-weight:bold;font-size:9;font-name:Arial;vertical-align:middle;text-align:center;height:20" rowCss="" >
+  <field name="ProductName" exportTo="Product_Name" CellType="strCell" />
+  <field name="WaferCode" exportTo="Wafer_Code" CellType="strCell" />
+  <field name="LotId" exportTo="Lot_id" CellType="strCell" />
+  <field name="WaferID" exportTo="Wf_id" CellType="strCell" />
+  <field name="DisposeText" exportTo="Dispose" CellType="strCell" />
+  <field name="UserID" exportTo="Owner" CellType="strCell" />
+  <field name="Comment" exportTo="Comment" CellType="strCell" />
+  <field name="CreateTime" exportTo="Time" CellType="dateCell" />
+</table>

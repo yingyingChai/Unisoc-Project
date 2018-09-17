@@ -1,0 +1,6 @@
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\KaYi.Utilities\bin\Debug\KaYi.Utilities.dll
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\KaYi.Utilities\bin\Debug\KaYi.Utilities.pdb
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\KaYi.Utilities\obj\Debug\KaYi.Utilities.csprojResolveAssemblyReference.cache
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\KaYi.Utilities\obj\Debug\KaYi.Utilities.csproj.CoreCompileInputs.cache
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\KaYi.Utilities\obj\Debug\KaYi.Utilities.dll
+E:\PMM PXP iTaskSP LHD\LHD\Spreadtrum.LHD_FT\KaYi.Utilities\obj\Debug\KaYi.Utilities.pdb

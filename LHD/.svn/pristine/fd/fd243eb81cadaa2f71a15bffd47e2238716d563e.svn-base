@@ -1,0 +1,42 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="Local" ProductVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="9851659A-3DCD-4FF6-925C-44CBC8B27F87">
+    <Build>
+      <Settings ApplicationIcon="" AssemblyKeyContainerName="" AssemblyName="Spreadtrum.LHD.Entity" AssemblyOriginatorKeyFile="" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library" PreBuildEvent="" PostBuildEvent="" RootNamespace="Spreadtrum.LHD.Entity" RunPostBuildEvent="OnBuildSuccess" StartupObject="">
+        <Config Name="Debug" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="DEBUG;TRACE" DocumentationFile="" DebugSymbols="true" FileAlignment="4096" IncrementalBuild="false" NoStdLib="false" NoWarn="" Optimize="false" OutputPath="bin\Debug\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="TRACE" DocumentationFile="" DebugSymbols="false" FileAlignment="4096" IncrementalBuild="false" NoStdLib="false" NoWarn="" Optimize="true" OutputPath="bin\Release\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="mscorlib" AssemblyName="mscorlib" HintPath="mscorlib.dll" />
+        <Reference Name="System.ComponentModel.DataAnnotations" AssemblyName="System.ComponentModel.DataAnnotations" HintPath="System.ComponentModel.DataAnnotations.dll" />
+        <Reference Name="KaYi.FileSystem" AssemblyName="KaYi.FileSystem" HintPath="KaYi.FileSystem.dll" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Users\Group.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Users\OSATUser.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Users\UserRoles.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Users\SPRDUser.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Users\User.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Users\UserGroup.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Systems\NotificationTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Systems\Notification.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Systems\NotificationCounter.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Systems\SilicondashOSATConfiguration.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Systems\UnreadMessageCounter.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\AutoJudgeResult.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\Comment.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\CommentTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\DecisionUtility.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\Lot.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\LotQuery.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\LotStatusList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\LotTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\NotificationswithLot.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\SWBin.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.Entity.Lots\LotView.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>

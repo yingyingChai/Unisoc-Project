@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7B8B626C-5A6F-45C9-9441-554E90FEF339}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>KaYi.Web.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="System.Web" />
+    <Reference Include="System" />
+    <Reference Include="KaYi.Utilities">
+      <HintPath>..\KaYi.Utilities\bin\Debug\KaYi.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Database">
+      <HintPath>..\KaYi.Database\bin\Debug\KaYi.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KaYi.Web.Infrastructure.DAL.Evaluator\EvaluateGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.Login\PasswordResetRequestGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.DictItems\DictItemGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.IPLocation\IpLocationGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.Log\SysLogGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.Session\SessionGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.Session\SessionViewGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.Tokens\TokenGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.Urls\UrlGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.VisitStatistics\VisitCounterByDateGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.DAL.System.WebSiteProtect\BlackListGateway.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.KaYiSystem\ApplicationConfiguration.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Evaluator\Evaluate.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Evaluator\EvaluateLevel.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Login\AbsAccount.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Login\PasswordResetRequest.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Login\QQClient.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Login\ResetPasswordResult.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Login\SinaClient.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.Login\UserTypes.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.DictItems\DictItem.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.HandlerResponses\Comparations.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.HandlerResponses\HandlerResponse.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.HandlerResponses\ResponseTypes.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.HandlerResponses\TipTypes.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.IPLocation\IpLocation.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.Log\SysLog.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.ProvinceAndCity\City.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.ProvinceAndCity\Province.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.Session\SessionView.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.Session\WebSession.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.Tokens\Token.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.Urls\Url.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.VisitStatistics\VisitorCounterByDate.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.WebSiteProtect\BlackList.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.System.WebSiteProtect\BlockType.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.UI.Items\GeneralMenuItem.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.UI.Items\Item.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.UI.Tab\PageTypes.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.UI.Tab\TabPage.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.UI\PageDisplayStyle.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Model.UploadFiles\UploadFile.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Pages\Entity.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Pages\EntityPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KaYi.Web.Infrastructure.Pages\NormalMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KaYi.Web.Infrastructure.Pages\NormalPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KaYi.Web.Infrastructure.Pages\PagerInfo.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Pages\PageStates.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Pages\PageUtilities.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Pages\WebControls.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KaYi.Web.Infrastructure.Services\DictItemService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\EvaluateService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\ExcelService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\GeoService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\IPLocateService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\LogService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\SessionService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\SiteProtectService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\UrlService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure.Services\VisitStatisticsService.cs" />
+    <Compile Include="KaYi.Web.Infrastructure\Context.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

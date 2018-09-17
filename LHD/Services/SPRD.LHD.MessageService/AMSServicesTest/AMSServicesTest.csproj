@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{259738D2-CD2B-4AA2-B718-2794F9E4D3AE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AMSServicesTest</RootNamespace>
+    <AssemblyName>AMSServicesTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BusinessBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF_DLL\BusinessBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF_DLL\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Database">
+      <HintPath>..\REF_DLL\KaYi.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Emails.Library">
+      <HintPath>..\REF_DLL\KaYi.Emails.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.FileSystem">
+      <HintPath>..\REF_DLL\KaYi.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Services.EventServices">
+      <HintPath>..\REF_DLL\KaYi.Services.EventServices.dll</HintPath>
+    </Reference>
+    <Reference Include="KaYi.Utilities">
+      <HintPath>..\REF_DLL\KaYi.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF_DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=0.9.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF_DLL\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="Spreadtrum.LHD.Business, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>REF_DLL\Spreadtrum.LHD.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Spreadtrum.LHD.DAL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>REF_DLL\Spreadtrum.LHD.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Spreadtrum.LHD.Entity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>REF_DLL\Spreadtrum.LHD.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XJP.BPM.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96376fd0a425dae1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF_DLL\XJP.BPM.Platform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COMMENTS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMAILS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FILES.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FILE_HITS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GROUPS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K2ExecuteAMS.cs" />
+    <Compile Include="LHDEntities.Context.cs">
+      <DependentUpon>LHDEntities.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LHDEntities.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LHDEntities.Designer.cs">
+      <DependentUpon>LHDEntities.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Log.cs" />
+    <Compile Include="LOTS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOTSImportLogs.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOT_STATUS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOT_STATUS_LIST.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MailHelp.cs" />
+    <Compile Include="NOTIFICATIONS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SILICONDASH_INTEGRATION.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SILICONDASH_OSAT_CONFIGURATIONS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SW_BIN.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="URLS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USERS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER_GROUPS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VENDORS.cs">
+      <DependentUpon>LHDEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="LHDEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LHDEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LHDEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LHDEntities.edmx</DependentUpon>
+      <LastGenOutput>LHDEntities.Context.cs</LastGenOutput>
+    </None>
+    <None Include="LHDEntities.edmx.diagram">
+      <DependentUpon>LHDEntities.edmx</DependentUpon>
+    </None>
+    <None Include="LHDEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LHDEntities.edmx</DependentUpon>
+      <LastGenOutput>LHDEntities.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\WebService\meetingams.disco" />
+    <None Include="Service References\WebService\meetingams.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="REF_DLL\BusinessBase.dll" />
+    <Content Include="REF_DLL\Common.Logging.dll" />
+    <Content Include="REF_DLL\KaYi.Database.dll" />
+    <Content Include="REF_DLL\Quartz.dll" />
+    <Content Include="REF_DLL\Spreadtrum.LHD.Business.dll" />
+    <Content Include="REF_DLL\Spreadtrum.LHD.DAL.dll" />
+    <Content Include="REF_DLL\Spreadtrum.LHD.Entity.dll" />
+    <Content Include="REF_DLL\XJP.BPM.Platform.dll" />
+    <Content Include="Schema.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

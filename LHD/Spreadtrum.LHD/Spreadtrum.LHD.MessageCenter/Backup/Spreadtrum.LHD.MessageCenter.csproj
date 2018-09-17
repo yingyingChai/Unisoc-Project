@@ -1,0 +1,39 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="Local" ProductVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="5F63BA3A-83B8-4A8B-BA9D-A403313EDDE0">
+    <Build>
+      <Settings ApplicationIcon="" AssemblyKeyContainerName="" AssemblyName="Spreadtrum.LHD.MessageCenter" AssemblyOriginatorKeyFile="" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="WinExe" PreBuildEvent="" PostBuildEvent="" RootNamespace="Spreadtrum.LHD.MessageCenter" RunPostBuildEvent="OnBuildSuccess" StartupObject="">
+        <Config Name="Debug" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="DEBUG;TRACE" DocumentationFile="" DebugSymbols="true" FileAlignment="4096" IncrementalBuild="false" NoStdLib="false" NoWarn="" Optimize="false" OutputPath="bin\Debug\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="TRACE" DocumentationFile="" DebugSymbols="false" FileAlignment="4096" IncrementalBuild="false" NoStdLib="false" NoWarn="" Optimize="true" OutputPath="bin\Release\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="mscorlib" AssemblyName="mscorlib" HintPath="mscorlib.dll" />
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" HintPath="System.Windows.Forms.dll" />
+        <Reference Name="Spreadtrum.LHD.Entity" AssemblyName="Spreadtrum.LHD.Entity" HintPath="Spreadtrum.LHD.Entity.dll" />
+        <Reference Name="System" AssemblyName="System" HintPath="System.dll" />
+        <Reference Name="websocket-sharp" AssemblyName="websocket-sharp" HintPath="websocket-sharp.dll" />
+        <Reference Name="Newtonsoft.Json" AssemblyName="Newtonsoft.Json" HintPath="Newtonsoft.Json.dll" />
+        <Reference Name="System.Configuration" AssemblyName="System.Configuration" HintPath="System.Configuration.dll" />
+        <Reference Name="Spreadtrum.LHD.Business" AssemblyName="Spreadtrum.LHD.Business" HintPath="Spreadtrum.LHD.Business.dll" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" HintPath="System.Drawing.dll" />
+        <Reference Name="KaYi.Services.EventServices" AssemblyName="KaYi.Services.EventServices" HintPath="KaYi.Services.EventServices.dll" />
+        <Reference Name="KaYi.Utilities" AssemblyName="KaYi.Utilities" HintPath="KaYi.Utilities.dll" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter\frmMain.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter\NotificationServer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter\Program.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter\SilicondashClient.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter.Properties\Resources.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter.Properties\Settings.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter.Base\MessageService.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SilicondashSimulator.Base.StompClients\Handler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SilicondashSimulator.Base.StompClients\StompClient.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter.frmMain.resx" BuildAction="EmbeddedResource" />
+        <File RelPath="Spreadtrum.LHD.MessageCenter.Properties.Resources.resx" BuildAction="EmbeddedResource" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>

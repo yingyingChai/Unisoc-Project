@@ -1,0 +1,9 @@
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Debug\KaYi.Database.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Debug\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Debug\KaYi.Database.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Debug\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Debug\KaYi.Services.EventServices.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Debug\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Debug\KaYi.Database.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Debug\KaYi.Database.csproj.CoreCompileInputs.cache
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Debug\KaYi.Database.csproj.CopyComplete

@@ -1,0 +1,47 @@
+﻿
+.container_login{
+    border:1px solid #808080;
+    margin-top:5%;
+    margin-bottom:5%;
+    padding:0px;
+}
+.login_title{
+    background:#0172b4;
+    overflow:hidden;
+}
+.login_title h3{ 
+    margin:10px 0px;
+    color:#ffffff;
+    font-weight:bold;
+}
+.login_form{
+    margin-top:8%;
+}
+.login_form .btn-block{
+    margin:15% 0px 25%;
+}
+.login_form input{
+    border-right:0px;
+}
+/*.login_form select{
+    background:url(/Images/login/user_bg.png) no-repeat left;
+    background-size:28px;
+    background-position-x:2px;
+    padding-left:35px;
+}*/
+/*.login_form input[type=text]{
+    background:url(/Images/login/user_bg.png) no-repeat left;
+    background-size:28px;
+    background-position-x:2px;
+}*/
+/*.login_form input[type=password]{
+    background:url(/Images/login/password_bg.png) no-repeat left;
+    background-size:28px;
+    background-position-x:2px;
+}*/
+.login_form 。form-group b{
+    border-left:0px;
+    background:#ffffff;
+    text-decoration:none;
+    cursor:pointer;
+}

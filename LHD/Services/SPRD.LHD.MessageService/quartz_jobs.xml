@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<quartz xmlns="http://quartznet.sourceforge.net/JobSchedulingData"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://quartznet.sourceforge.net/JobSchedulingData file:/C:/Work/Quartz/Quartz.NET/src/Quartz/Xml/job_scheduling_data.xsd"
+				version="1.0"
+				overwrite-existing-jobs="true">
+  <calendar type="Quartz.Impl.Calendar.AnnualCalendar, Quartz" replace="false">
+    <name>cal1</name>
+    <description>description0</description>
+    <base-calendar type="Quartz.Impl.Calendar.BaseCalendar, Quartz" replace="false">
+      <name>name1</name>
+      <description>description1</description>
+    </base-calendar>
+  </calendar>
+  <calendar type="Quartz.Impl.Calendar.AnnualCalendar, Quartz" replace="false">
+    <name>cal2</name>
+    <description>description0</description>
+    <base-calendar type="Quartz.Impl.Calendar.BaseCalendar, Quartz" replace="false">
+      <name>name1</name>
+      <description>description1</description>
+    </base-calendar>
+  </calendar>
+  <job>
+    <job-detail>
+      <name>K2ExecuteAMS</name>
+      <group>K2ExecuteAMS</group>
+      <description>K2 Execute Service</description>
+      <job-type>SPRD.LHD.MessageService.K2ExecuteAMS, SPRD.LHD.MessageService</job-type>
+      <volatile>false</volatile>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job-detail>
+    <trigger>
+      <simple>
+        <name>K2ExecuteAMS_Trigger</name>
+        <group>K2ExecuteAMS</group>
+        <description>Trigger</description>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <calendar-name>cal1</calendar-name>
+        <volatile>false</volatile>
+        <job-name>K2ExecuteAMS</job-name>
+        <job-group>DEFAULT</job-group>
+        <start-time>1982-06-28T18:15:00.0Z</start-time>
+        <end-time>3010-05-04T18:13:51.0Z</end-time>
+        <repeat-count>999999999</repeat-count>
+        <repeat-interval>10000</repeat-interval>
+      </simple>
+    </trigger>
+  </job>
+</quartz>
+

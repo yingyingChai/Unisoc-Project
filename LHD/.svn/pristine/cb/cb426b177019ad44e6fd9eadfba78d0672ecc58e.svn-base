@@ -1,0 +1,5 @@
+D:\SpreadTrum\2.QA Lot Hold Disposition\SourceCode\Application\Spreadtrum.LHD\Spreadtrum.LHD.Entity\Fakes\KaYi.FileSystem.fakes : warning : Cannot generate stub for KaYi.FileSystem.Services.FileSystemService: type is sealed.
+D:\SpreadTrum\2.QA Lot Hold Disposition\SourceCode\Application\Spreadtrum.LHD\Spreadtrum.LHD.Entity\Fakes\KaYi.FileSystem.fakes : warning : Cannot generate stub for KaYi.FileSystem.Model.FileStates: type is a value type.
+D:\SpreadTrum\2.QA Lot Hold Disposition\SourceCode\Application\Spreadtrum.LHD\Spreadtrum.LHD.Entity\Fakes\KaYi.FileSystem.fakes : warning : Cannot generate stub for KaYi.FileSystem.Model.FileTypes: type is a value type.
+D:\SpreadTrum\2.QA Lot Hold Disposition\SourceCode\Application\Spreadtrum.LHD\Spreadtrum.LHD.Entity\Fakes\KaYi.FileSystem.fakes : warning : Cannot generate shim for KaYi.FileSystem.Model.FileStates: type is an enum.
+D:\SpreadTrum\2.QA Lot Hold Disposition\SourceCode\Application\Spreadtrum.LHD\Spreadtrum.LHD.Entity\Fakes\KaYi.FileSystem.fakes : warning : Cannot generate shim for KaYi.FileSystem.Model.FileTypes: type is an enum.

@@ -1,0 +1,9 @@
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\bin\Debug\KaYi.Emails.Library.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\bin\Debug\KaYi.Emails.Library.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\bin\Debug\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\bin\Debug\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\bin\Debug\KaYi.Database.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\bin\Debug\KaYi.Services.EventServices.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\obj\Debug\KaYi.Emails.Library.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\obj\Debug\KaYi.Emails.Library.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Emails.Library\obj\Debug\KaYi.Emails.Library.pdb

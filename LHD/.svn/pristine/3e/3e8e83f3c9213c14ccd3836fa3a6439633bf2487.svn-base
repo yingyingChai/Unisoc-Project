@@ -1,0 +1,209 @@
+﻿@{
+	Layout = "~/Areas/Shared/masterPage.cshtml";
+}
+@section css{
+    <style>
+    .pager-row {
+        text-align: right;
+    }
+    #custom-pager {
+        margin-top:10px;
+        display:none;
+        text-align:left;
+        margin-right:10px;
+    }
+    #custom-pager span {
+        display:inline-block;
+        font-size: 12px;
+    }
+    #custom-pager .pageNum {
+        width:60px;
+        height: 26px;
+        padding: 3px 5px;
+    }
+    #custom-pager .totalPages,#custom-pager .currentPage{
+        color:red;
+        margin:0 5px;
+        font-weight:bold;
+    }
+    #swbinexample,#custom-pager .custom-item {
+    display:inline-block;
+
+    }
+
+    #custom-pager .goPage {
+    padding:3px 10px;
+    }
+
+
+    </style>
+}
+@section js{
+	<script>
+		app.controller('getSWBins', function ($scope, $http) {
+			var lotID = $("#lotID").val();
+			getSWBin(0);
+			function getSWBin(pageIndex) {
+			    $http.post("/Lots/SWBin/getSWBin?lotID=" + lotID + "&pageSize=15&pageIndex=" + pageIndex + "&isPassed=" + $('#inputSBLType').val() + "&limited=" + $('#inputLimits').val() + "&code=" + $('#inputCode').val() + "&defect=" + $('#inputDefect').val() + "&qty=" + $('#inputQty').val() + "&failRate=" + $('#inputFailRate').val() + "&orderBy=" + $('#orderBy').val() + "&desc=" + $('#desc').val())
+                        .success(function (response) {
+						$scope.SWdata = response;
+						currentPage = $scope.SWdata.currentPage + 1;
+						totalPages = $scope.SWdata.totalPages;
+						if (parseInt($scope.SWdata.rows.length) > 0) {
+							//分页功能
+							var SWBin = {
+								currentPage: currentPage,//当前页
+								totalPages: totalPages,//一共多少页
+								numberOfPages: 5,//每次显示多少页
+								pageUrl: function (type, page, current) {
+									return "javascript:void(0);";
+								}
+							}
+							$('#swbinexample').bootstrapPaginator(SWBin);
+							$('#custom-pager').show();
+							$('#custom-pager .totalPages').html(totalPages ? totalPages : 0);
+							$('#custom-pager .currentPage').html(currentPage ? currentPage : 0);
+							$('#custom-pager .goPage').on('click', function () {
+							    var currPageNum = $('#custom-pager .pageNum').val();
+							    if (currPageNum > 0 && currPageNum <= totalPages) {
+							        getSWBin(currPageNum - 1);
+							    } else {
+							        $('#custom-pager .pageNum').val('1');
+							    }
+							});
+							$("#swbinexample a").click(function () {
+								getSWBin($(this).data("page") - 1);
+							});
+						}
+					});
+			}
+			$('#swbinsInput input').keyup(function () {
+				getSWBin(0);
+			});
+			//排序
+			$('#webinOrderby th').click(function () {
+				var orderby = $(this).data("orderby");
+				var desc = $(this).data("desc");
+				var html = $(this).html();
+				if (orderby != null) {
+					$('#webinOrderby th span').html("")
+					if (desc) {
+						$(this).data("desc", false);
+						$(this).children('span').html("&darr;");
+					} else {
+						$(this).data("desc", true);
+						$(this).children('span').html("&uarr;");
+					}
+					$('#orderBy').val(orderby);
+					$('#desc').val(desc);
+					getSWBin(0);
+				}
+			});
+
+			$("#btnExportSwbins").click(
+                function () {
+                    $.post("/Export/ExportSwbin?" + $("#frmSWbins").serialize(), function (data) {
+                        var response = new Response(data);
+                        if (response.Code == 0) {
+                            response.Next();
+                        }
+                        else {
+                            alert(response.Message);
+                        }
+                    });
+                }
+             );
+		});
+	</script>
+}
+<form id="frmSWbins">
+    <div class="row" ng-controller="getSWBins">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="">
+                        <a href="#swbinsInput" data-toggle="collapse" class="btn btn-primary ">Query</a>
+                        <a id="btnExportSwbins" class="btn btn-primary">Export</a>
+                        <a href="javascript:history.back();" style="float:right">  &lt;&lt;BACK</a>
+                    </div>
+                    <div class="table-responsive">
+                        <div class="dataTables_wrapper form-inline dt-bootstrap">
+                            <input type="hidden" value="@ViewBag.LotID" name="lotID" id="lotID" />
+                            <input type="hidden" id="orderBy" value="" />
+                            <input type="hidden" value="false" name="desc" id="desc" />
+                            <table id="swbinTable" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr id="webinOrderby" role="row" style="cursor:pointer;">
+                                        <th data-orderby="Code" data-desc="true">Code<span></span></th>
+                                        <th data-orderby="IsPassed" data-desc="true">SBL Type<span></span></th>
+                                        <th data-orderby="Defect" data-desc="true">Defect<span></span></th>
+                                        <th data-orderby="Qty" data-desc="true">Qty<span></span></th>
+                                        <th data-orderby="FailRate" data-desc="true">Rate<span></span></th>
+                                        <th data-orderby="Limited" data-desc="true">Limits<span></span></th>
+                                        <!--<th data-orderby="FailedBinPercent" data-desc="true">Percent<span></span></th>-->
+                                    </tr>
+                                </thead>
+                                <tr id="swbinsInput">
+                                    <td><input id="inputCode" type="text" class="full-width" /></td>
+                                    <td><input id="inputSBLType" type="text" class="full-width" /></td>
+                                    <td><input id="inputDefect" type="text" class="full-width" /></td>
+                                    <td><input id="inputQty" type="text" class="full-width" /></td>
+                                    <td><input id="inputFailRate" type="text" class="full-width" /></td>
+                                    <td><input id="inputLimits" type="text" class="full-width" /></td>
+                                    <!--<td><input id="inputPercent" type="text"  class="full-width" /></td>-->
+                                </tr>
+                                <tbody>
+                                    <tr data-ng-repeat="u in SWdata.rows">
+                                        <td ng-if="u.IsTriggerd=='1'"><span style="color:red">{{u.Code}}</span></td>
+                                        <td ng-if="u.IsTriggerd!='1'">{{u.Code}}</td>
+
+
+                                        <td ng-if="u.IsTriggerd=='1'" style="text-align:left"><span style="color:red">{{u.IsPassed}}</span></td>
+                                        <td ng-if="u.IsTriggerd!='1'" style="text-align:left">{{u.IsPassed}}</td>
+
+                                        <td ng-if="u.IsTriggerd=='1'"><span style="color:red">{{u.Defect}}</span></td>
+                                        <td ng-if="u.IsTriggerd!='1'">{{u.Defect}}</td>
+
+                                        <td ng-if="u.IsTriggerd=='1'" style="text-align:right"><span style="color:red">{{u.Qty}}</span></td>
+                                        <td ng-if="u.IsTriggerd!='1'" style="text-align:right">{{u.Qty}}</td>
+
+
+                                        <td ng-if="u.IsTriggerd=='1'" style="text-align:right"><span style="color:red">{{u.FailRate|number:2}}%</span></td>
+                                        <td ng-if="u.IsTriggerd!='1'" style="text-align:right">{{u.FailRate|number:2}}%</td>
+
+                                        <td style="text-align:right" ng-if="u.Limited!=0 && u.IsTriggerd=='1'"><span style="color:red">{{u.Limited|number:2}}%</span></td>
+                                        <td style="text-align:right" ng-if="u.Limited!=0 && u.IsTriggerd=='2'">{{u.Limited|number:2}}%</td>
+
+                                        <td style="text-align:right" ng-if="u.Limited==0"></td>
+
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+
+                        </div>
+                        <div class="col-sm-7 pager-row">
+                            <div id="swbinexample">
+
+                            </div>
+                            <div id="custom-pager" class="pull-right">
+                                <span><span class="currentPage"></span>/<span class="totalPages"></span></span>
+                                <div class="input-group custom-item">
+                                    <input type="number" class="form-control pageNum" min="1" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm goPage" type="button">Go</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

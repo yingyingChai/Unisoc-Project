@@ -1,0 +1,4 @@
+D:\LHD\Spreadtrum.LHD\KaYi.Services.EventServices\bin\Debug\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Services.EventServices\bin\Debug\KaYi.Services.EventServices.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Services.EventServices\obj\Debug\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Services.EventServices\obj\Debug\KaYi.Services.EventServices.pdb

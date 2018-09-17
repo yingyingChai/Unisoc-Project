@@ -1,0 +1,5 @@
+D:\LHD\Spreadtrum.LHD\KaYi.Utilities\bin\Debug\KaYi.Utilities.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Utilities\bin\Debug\KaYi.Utilities.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Utilities\obj\Debug\KaYi.Utilities.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\KaYi.Utilities\obj\Debug\KaYi.Utilities.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Utilities\obj\Debug\KaYi.Utilities.pdb

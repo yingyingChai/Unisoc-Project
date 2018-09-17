@@ -1,0 +1,7 @@
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Release\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Release\KaYi.Database.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Release\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Database\bin\Release\KaYi.Services.EventServices.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Release\KaYi.Database.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Release\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Database\obj\Release\KaYi.Database.pdb

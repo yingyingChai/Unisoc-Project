@@ -1,0 +1,12 @@
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Web.Infrastructure.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Web.Infrastructure.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Utilities.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Utilities.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Database.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\bin\Debug\KaYi.Services.EventServices.pdb
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\obj\Debug\KaYi.Web.Infrastructure.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\obj\Debug\KaYi.Web.Infrastructure.dll
+D:\LHD\Spreadtrum.LHD\KaYi.Web.Infrastructure\obj\Debug\KaYi.Web.Infrastructure.pdb

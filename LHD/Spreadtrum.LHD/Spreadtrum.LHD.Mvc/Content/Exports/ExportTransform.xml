@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<table name="EXPORTTransform" titleCss="font-weight:bold;font-size:9;font-name:Arial;vertical-align:middle;text-align:center;height:20" rowCss="" >
+  <field name="ProductName" exportTo="Product_Name" CellType="strCell" />
+  <field name="WaferCode" exportTo="Wafer_Code" CellType="strCell" />
+  <field name="Vendor" exportTo="OSAT" CellType="strCell" />
+  <field name="LotId" exportTo="Lot_id" CellType="strCell" />
+  <field name="StatusText" exportTo="Status" CellType="strCell" />
+  <field name="HoldReason" exportTo="Hold Reason" CellType="strCell" />
+  <field name="WfCount" exportTo="Wf_Count" CellType="intCell" />
+  <field name="Yield" exportTo="Yield" CellType="pctCell" />
+  <field name="CompletionDate" exportTo="Completion Date" CellType="dateCell" />
+</table>

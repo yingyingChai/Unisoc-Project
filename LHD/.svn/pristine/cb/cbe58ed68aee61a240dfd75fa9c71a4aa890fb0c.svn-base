@@ -1,0 +1,217 @@
+﻿@using Spreadtrum.LHD.Mvc.Areas.Shared
+@using Spreadtrum.LHD.Entity.Users
+@using Spreadtrum.LHD.Business
+@{
+    var loginUser = BaseController.CurrentUserInfo;
+    if (loginUser == null) { Response.Redirect("/Accounts/Login", true); }
+    string userRole = loginUser.Role.ToString();
+    string userType = loginUser.JobType;
+    
+}
+<ul class="nav metismenu" id="side-menu">
+    <li class="nav-header">
+        <div class="dropdown profile-element">
+            @{
+                if (loginUser.Role != UserRoles.OSAT && loginUser.Role != UserRoles.OSATAdmin
+                    && loginUser.Role != UserRoles.Fab && loginUser.Role != UserRoles.FabAdmin)
+                {
+                    SPRDUser sprdUser = SPRDInterface.GetSPRDUserByEmail(loginUser.Email);
+                    string sprdInSite = System.Configuration.ConfigurationManager.AppSettings["SPRDInSite"];
+                    if (sprdInSite == "1")
+                    {
+                        <span>
+                            <img alt="image" width="48" height="48" class="img-circle" src="http://eip.spreadtrum.com/searchcenter/sites/UserSearch/_layouts/15/Spreadtrum.UserSearch/Userphoto.ashx?badge=@sprdUser.SN" />
+                        </span>
+                    }
+                    else
+                    {
+                        <img alt="image" width="48" height="48" class="img-circle" src="~/Images/120.png" />
+                    }
+
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">
+                                    @loginUser.FullName
+                                    (@loginUser.ChineseName)
+                                </strong>
+                            </span>
+                        </span>
+                    </a>
+                }
+                else
+                {
+                    <span>
+                        <img alt="image" width="48" height="48" class="img-circle" src="~/Images/120.png" />
+                    </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">
+                                    @loginUser.FullName
+                                </strong>
+                            </span>
+                            <span>
+                                @loginUser.Email
+                            </span>
+                        </span>
+                    </a>
+                }
+            }
+        </div>
+
+    </li>
+    
+    @{
+        if (!string.IsNullOrEmpty(userType) && userType.IndexOf("FT") > -1)
+        {
+            <li>
+                <a href="javascript:();">
+                    <i class="fa fa-bar-chart-o"></i> <span class="nav-label">FT</span><span class="fa arrow"></span>
+                </a>
+                    <ul class="nav nav-second-level collapse in @*@NavigatorHelper.GenerateNavigatorClass("WaitConfirm,LotDispose,NewComment,WaitForOtherBinDispose,EQALots",ViewContext.ViewBag.Url.NavigatorID)*@">
+                        <li>
+                            <a href="/Lots/Query">Query<span class="nav-label"></span></a>
+                        </li>
+                        @if (string.Copy("OSATAdmin").IndexOf(userRole) >= 0)
+                {
+                            <li>
+                                <a href="/Lots/Query/WaitConfirm">
+                                    Wait Confirm
+                                    @if (loginUser.WaitForConfirm > 0)
+                                    {
+                                        <span class="label label-warning pull-right" id="WaitForConfirm">@loginUser.WaitForConfirm</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="label label-warning pull-right" id="WaitForConfirm" style="display:none">0</span>
+                                    }
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Lots/Query/EQALots">
+                                    EQA
+                                    @if (loginUser.EQALots > 0)
+                                    {
+                                        <span class="label label-warning pull-right" id="EQALots">@loginUser.EQALots</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="label label-warning pull-right" id="EQALots" style="display:none">0</span>
+                                    }
+                                </a>
+                            </li>
+                        }
+                        @if (string.Copy("PEAdmin,QAAdmin").IndexOf(userRole) >= 0)
+                {
+                            <li>
+                                <a href="/Lots/Query/LotDispose">
+                                    Lot Dispose
+                                    @if (loginUser.WaitForDispose > 0)
+                                    {
+                                        <span class="label label-warning pull-right" id="WaitForDispose">@loginUser.WaitForDispose</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="label label-warning pull-right" id="WaitForDispose" style="display:none">0</span>
+                                    }
+                                </a>
+                            </li>
+                        }
+
+
+
+
+                        @if (string.Copy("PEAdmin,PE").IndexOf(userRole) >= 0)
+                        {
+                            <li>
+                                <a href="/Lots/Query/OtherBinDispose">
+                                    Other Bin Dispose
+                                    @if (loginUser.WaitForOtherBinDispose > 0)
+                                    {
+                                        <span class="label label-warning pull-right" id="WaitForOtherBinDispose">@loginUser.WaitForOtherBinDispose</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="label label-warning pull-right" id="WaitForOtherBinDispose" style="display:none">0</span>
+                                    }
+                                </a>
+                            </li>
+                        }
+
+                        @if (string.Copy("PEAdmin,QAAdmin,PCAdmin,OSATAdmin").IndexOf(userRole) >= 0)
+                {
+                            <li>
+                                <a href="/Lots/Query/NewComment">
+                                    New Comment
+                                    @if (loginUser.NewComments > 0)
+                                    {
+                                        <span class="label label-warning pull-right" id="NewComments">@loginUser.NewComments</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="label label-warning pull-right" id="NewComments" style="display:none">0</span>
+                                    }
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+
+                
+            </li>
+        }
+        if (!string.IsNullOrEmpty(userType) && userType.IndexOf("CP") > -1)
+        {
+            <li>
+                <a href="javascript:();">
+                    <i class="fa fa-bar-chart-o"></i> <span class="nav-label">CP</span><span class="fa arrow"></span>
+                </a>
+                    <ul class="nav nav-second-level collapse in @*@NavigatorHelper.GenerateNavigatorClass("Index,List,History",ViewContext.ViewBag.Url.NavigatorID)*@">
+                        <li>
+                            <a href="/Lots/Transform"> Query<span class="nav-label"></span></a>
+                        </li>
+                        <li>
+                            <a href="/Lots/Transform?st=Hold&oc=1"> Lot Dispose<span class="nav-label"></span></a>
+                        </li>
+                        <li>
+                            <a href="/Lots/Wafer/List">Wafer Operation <span class="nav-label"></span></a>
+                        </li>
+                        <li>
+                            <a href="/Lots/Wafer/History"> History<span class="nav-label"></span></a>
+                        </li>
+                    </ul>
+
+               
+            </li>
+        }
+    }
+    
+    
+
+            @if (string.Copy("PEAdmin,QAAdmin,PCAdmin,Supervisor").IndexOf(userRole) >= 0
+                && string.Copy(userRole).IndexOf("Admin") >= 0 || userRole == "Supervisor")
+            {
+        <li>
+            <a href="javascript:();">
+                <i class="fa fa-bar-chart-o"></i>
+                <span class="nav-label">Configuration</span><span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level collapse in">
+                @if (string.Copy("PCAdmin,Supervisor").IndexOf(userRole) >= 0)
+                {
+                <li><a href="/Users/UserManager/PC">PC User</a></li>
+                }
+
+                @if (string.Copy("PEAdmin,Supervisor").IndexOf(userRole) >= 0)
+                {
+                <li><a href="/Users/UserManager/PE">PE User</a></li>
+                }
+                @if (string.Copy("QAAdmin,Supervisor").IndexOf(userRole) >= 0)
+                {
+                <li><a href="/Users/UserManager/QA">QA User</a></li>
+                }
+            </ul>
+        </li>
+            }
+        </ul>

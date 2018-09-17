@@ -1,0 +1,553 @@
+﻿@using Spreadtrum.LHD.Entity.Lots
+@using Spreadtrum.LHD.Entity.Users;
+@using Spreadtrum.LHD.Mvc.Areas.Shared;
+@{
+    ViewBag.Title = "Lot Details";
+    ViewBag.ID = "Lot Detail";
+    Layout = "~/Areas/Shared/masterPage.cshtml";
+}
+@model LotView
+@{
+    var loginUser = BaseController.CurrentUserInfo;
+    string UserRole = loginUser.Role.ToString();
+}
+
+@section css{
+    <link href="~/Areas/Lots/Contents/Comment/comments.css" rel="stylesheet" />
+    <style>
+        .table > tbody > tr > th {
+            text-align: right;
+        }
+
+        .table > tbody > tr > td {
+            text-align: left;
+        }
+
+        .LotRow > div > div, .LotRow > div {
+            padding: 5px 2px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .LotRow > div {
+            border-top: 1px solid #e2e2e2;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .LotRow b.text-left {
+            float: left;
+        }
+
+        .LotRow > div > b, .LotRow > div > input, .LotRow > div > select {
+            max-width: 120px;
+            white-space: nowrap;
+        }
+
+        .col-xs-12.panel {
+            padding: 0px;
+        }
+
+        #btnCollapseSWBin, #swbinExport {
+            background: #F5F5F6;
+        }
+
+        .caption {
+            width: 140px;
+        }
+
+        .field_value {
+            color: #008f45;
+        }
+
+        .pager-row {
+            text-align: right;
+        }
+
+        #custom-pager {
+            margin-top: 10px;
+            display: none;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+            #custom-pager span {
+                display: inline-block;
+                font-size: 12px;
+            }
+
+            #custom-pager .pageNum {
+                width: 60px;
+                height: 26px;
+                padding: 3px 5px;
+            }
+
+            #custom-pager .totalPages, #custom-pager .currentPage {
+                color: red;
+                margin: 0 5px;
+                font-weight: bold;
+            }
+
+            #swbinexample, #custom-pager .custom-item {
+                display: inline-block;
+            }
+
+            #custom-pager .goPage {
+                padding: 3px 10px;
+            }
+    </style>
+}
+@section js{
+    <script src="~/Scripts/Angular/angular-sanitize.min.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.cookies.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.proxy.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.queue.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.speed.js"></script>
+    <script src="~/Scripts/OtherBinDispose.js"></script>
+    <script src="~/Areas/Lots/Contents/Details/Details.js"></script>
+
+}
+<script>
+    var _holdreason = '@Model.HoldReason';
+</script>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content" data-ng-controller="getCommentList">
+                <form method="post" id="frmDetails">
+                    <input type="hidden" value="@Guid.NewGuid().ToString()" id="hidNewCommentID" name="hidNewCommentID" />
+                    <input type="hidden" value="@Model.LotID" name="lotID" id="lotID" />
+                    <input type="hidden" value="@UserRole" name="hidRole" id="hidRole" />
+                    <div class="row">
+                        <div class="LotRow col-xs-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Lot No.</b><br />
+                                <span class="field_value">@Model.CustomerLotID</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Subcon Lot</b><br />
+                                <span class="field_value">@Model.SubconLot<br /></span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">OSAT</b><br /><span class="field_value">@Model.VendorName</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Trigger Mode</b><br /><span class="field_value">@Model.TriggerMode</span>
+                            </div>
+                        </div>
+                        <div class="LotRow col-xs-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Status</b><br /><span id="lblStatus" class="field_value">@Model.Status</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Auto Judge Result</b><br /><span class="field_value">@Model.AutoJudgeResult</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Stage</b><br /><span class="field_value">@Model.Stage</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" title="@Model.TestProgram">
+                                <b class="text-left caption">Test Program</b><br /><span class="field_value">@Model.TestProgram</span>
+                            </div>
+                        </div>
+                        <div class="LotRow col-xs-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">QA Dispose</b><br />
+                                @if ((@Model.AutoJudgeResult.ToUpper() == "HOLD" || Model.ManualHold) && string.Copy("QAAdmin").IndexOf(UserRole) >= 0 && (Model.QADispose == 255 || Model.QADispose == 4))
+                                {
+                                    <select name="QADispose" id="QADispose">
+                                        <option value="-1"></option>
+                                        <option value="4" @(Model.QADispose == 4 ? "selected" : "")>Pending</option>
+                                        <option value="0" @(Model.QADispose == 0 ? "selected" : "")>Release</option>
+                                        <option value="1" @(Model.QADispose == 1 ? "selected" : "")>Bin1 Release</option>
+                                        <option value="2" @(Model.QADispose == 2 ? "selected" : "")>Rescreen</option>
+                                        <option value="3" @(Model.QADispose == 3 ? "selected" : "")>Scrap</option>
+                                    </select>
+                                }
+                                else
+                                {
+                                    string QADisposeText = (@Model.AutoJudgeResult.ToUpper() == "HOLD" || Model.ManualHold) ? @Model.QADisposeText : "Normal";
+                                    <span style="color:#f00">@QADisposeText</span>
+                                    <input type="hidden" name="QADispose" id="QADispose" value="@Model.QADispose" />
+                                }
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">PE Dispose</b><br />
+                                @if ((@Model.AutoJudgeResult.ToUpper() == "HOLD" || Model.ManualHold) && string.Copy("PEAdmin").IndexOf(UserRole) >= 0 && (Model.PEDispose == 255 || Model.PEDispose == 4))
+                                {
+                                    <select name="PEDispose" id="PEDispose">
+                                        <option value="-1"></option>
+                                        <option value="4" @(Model.PEDispose == 4 ? "selected" : "")>Pending</option>
+                                        <option value="0" @(Model.PEDispose == 0 ? "selected" : "")>Release</option>
+                                        <option value="1" @(Model.PEDispose == 1 ? "selected" : "")>Bin1 Release</option>
+                                        <option value="2" @(Model.PEDispose == 2 ? "selected" : "")>Rescreen</option>
+                                        <option value="3" @(Model.PEDispose == 3 ? "selected" : "")>Scrap</option>
+                                    </select>
+                                }
+                                else
+                                {
+                                    string PEDisposeText = (@Model.AutoJudgeResult.ToUpper() == "HOLD" || Model.ManualHold) ? @Model.PEDisposeText : "Normal";
+                                    <span style="display:inline-block;color:#f00">@PEDisposeText</span>
+                                    <input type="hidden" name="PEDispose" id="PEDispose" value="@Model.PEDispose" />
+                                }
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">SPRD Decision</b>
+                                <br />
+                                <span id="SPRDDecisionText" style="display:inline-block;color:#f00">@Model.SPRDDecisionText</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                @if (string.Copy("PE,PEAdmin").IndexOf(UserRole) >= 0)
+                                {
+                                    string display = (Model.PEDispose == 1 || (Model.QADispose == 1 && Model.PEDispose == 0)) ? "" : "none;";
+                                    string clickable = Model.OtherBinDispose ? "disabled checked" : "";
+                                    <div id="otherBinDisposeArea" style="display:@display;margin:0px;padding:0px">
+                                        <label style="padding:0px;margin:0px">Other Bin Dispose</label><br />
+                                        <input style="padding:0px;margin:0px" id="chkOtherBinDispose" type="checkbox" name="chkOtherBinDispose" @clickable />
+                                    </div>
+                                    <input type="hidden" id="hidOtherBinDisposeDone" name="hidOtherBinDisposeDone" value="0" />
+                                }
+                                else
+                                {
+                                    string attr = Model.OtherBinDispose ? "checked" : "";
+                                    <div>
+                                        <label style="padding:0px;margin:0px">Other Bin Dispose</label><br />
+                                        <input style="padding:0px;margin:0px" id="chkOtherBinDispose" type="checkbox" name="chkOtherBinDispose" disabled @attr />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="LotRow col-xs-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Tester I.D.</b><br /><span class="field_value">@Model.TesterID</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Platform</b><br /><span class="field_value">@Model.Platforms</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">L/B No.</b><br /><span class="field_value">@Model.LBNO</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Lot Type</b><br /><span class="field_value">@Model.LotType</span>
+                            </div>
+                        </div>
+                        <div class="LotRow col-xs-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Move In.Qty</b><br /><span class="field_value">@Model.QtyIn</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Move Out.Qty</b><br /><span class="field_value">@Model.QtyOut</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Qty.In</b><br /><span class="field_value">@Model.totalCount</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Qty.Out</b><br /><span class="field_value">@Model.passCount</span>
+                            </div>
+                        </div>
+                        <div class="LotRow col-xs-12">
+
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Yield</b><br /><span class="field_value">@Convert.ToSingle(Model.Yield).ToString("F2")%</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">O/S Rate</b><br /><span class="field_value">@Convert.ToSingle(Model.OSRate).ToString("F2")%</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Damage</b><br /><span class="field_value">@Model.Damage</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Loss</b><br /><span class="field_value">@Model.Loss</span>
+                            </div>
+                        </div>
+                        <div class="LotRow col-xs-12">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Completion Date</b><br /><span class="field_value">@Model.CompletionDate.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Jugement Date</b><br /><span class="field_value">@Model.decisionTime.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <b class="text-left caption">Uploaded Date</b><br /><span class="field_value">@Model.UpdateTime.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+                            </div>
+                        </div>
+                            <div class="LotRow col-xs-12">
+                                <div class="col-xs-12">
+                                    <b class="text-left caption">Hold Reason</b><br />
+                                    <span id="SpanHoldReason" class="field_value"></span>
+                                </div>
+                            </div>
+                            @*@if (!string.IsNullOrEmpty(Model.ReasonStepFail))
+            {
+            <div class="LotRow col-xs-12">
+                <div class="col-xs-12">
+                    <b class="text-left caption">Step Quantities Fail</b><br />
+                    <span class="field_value">@Model.ReasonStepFail</span>
+                </div>
+            </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.ReasonStepOrderFail))
+            {
+
+            <div class="LotRow col-xs-12">
+                <div class="col-xs-12">
+                    <b class="text-left caption">Step Order Fail</b><br />
+                    <span class="field_value">@Model.ReasonStepOrderFail</span>
+                </div>
+            </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.ReasonStepWarn))
+            {
+            <div class="LotRow col-xs-12">
+                <div class="col-xs-12">
+                    <b class="text-left caption">Step Quantities Warn</b><br />
+                    <span class="field_value">@Model.ReasonStepWarn</span>
+                </div>
+            </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.ReasonSBLFail))
+            {
+            <div class="LotRow col-xs-12">
+                <div class="col-xs-12">
+                    <b class="text-left caption">SBL Fail</b><br />
+                    <span class="field_value">@Model.ReasonSBLFail</span>
+                </div>
+            </div>
+            }
+            @if (!string.IsNullOrEmpty(Model.ReasonUntestedFail))
+            {
+            <div class="LotRow col-xs-12">
+                <div class="col-xs-12">
+                    <b class="text-left caption">Untested Fail</b><br />
+                    <span class="field_value">@Model.ReasonUntestedFail</span>
+                </div>
+            </div>
+            }
+            <div class="LotRow col-xs-12">
+                <div class="col-xs-12">
+                    <b class="text-left caption">Hold Reason</b><br />
+                    <span class="field_value">@Model.HoldReason</span>
+                </div>
+            </div>*@
+                            <div class="LotRow col-xs-12">
+                                <div class="col-xs-12">
+                                    <b class="text-left caption">Url</b><br />
+                                    <span class="field_value"><a href="@Model.Url" target="_blank">@Model.Url</a></a></span>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="hidOSATConfirmed" name="hidOSATConfirmed" value="0" />
+                            @if (
+                        (UserRole == "OSAT" || UserRole == "OSATAdmin")
+                        &&
+                        ((!Model.VenderConfirmed && (Model.SPRDDecision != 255)) || (Model.OtherBinDispose && !Model.OtherBinDisposeConfirmed))
+                  )
+                            {
+                                <h3 class="pull-left" style="margin-top:20px; margin-left:20px;">OSAT Confirm:</h3>
+                                <div class="LotRow col-xs-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Release</label>
+                                        <div>
+                                            <input type="checkbox" name="chkConfirmedValue" class="chkOSATConfirmOptions" value="0" style="position:relative;top:3px;" @(Model.SPRDDecision == 0 && !Model.VenderConfirmed ? "" : "disabled") @(Model.SPRDDecision == 0 && Model.VenderConfirmed ? "checked" : "") />
+                                            This lot has been released in MES system.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Bin1 Release</label>
+                                        <div>
+                                            <input type="checkbox" id="chkBin1Release" name="chkConfirmedValue" class="chkOSATConfirmOptions" value="1" style="position:relative;top:3px;" @(Model.SPRDDecision == 1 && !Model.VenderConfirmed ? "" : "disabled") @(Model.SPRDDecision == 1 && Model.VenderConfirmed ? "checked" : "") />
+                                            Bin1 has been released in MES system.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Other Bin Dispose</label>
+                                        <div>
+                                            <input type="checkbox" id="chkConfirmOtherBinDispose" name="chkConfirmedValue" class="chkOSATConfirmOptions" value="5" style="position:relative;top:3px;" @(Model.SPRDDecision == 1 && Model.OtherBinDispose && !Model.OtherBinDisposeConfirmed ? "" : "disabled") @(Model.SPRDDecision == 1 && Model.OtherBinDisposeConfirmed && Model.VenderConfirmed ? "checked" : "") />
+                                            Acknowledge
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Rescreen</label>
+                                        <div>
+                                            <input type="checkbox" name="chkConfirmedValue" class="chkOSATConfirmOptions" value="2" style="position:relative;top:3px;" @(Model.SPRDDecision == 2 && !Model.VenderConfirmed ? "" : "disabled") @(Model.SPRDDecision == 2 && Model.VenderConfirmed ? "checked" : "") />
+                                            Acknowledge
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Scrap</label>
+                                        <div>
+                                            <input type="checkbox" name="chkConfirmedValue" class="chkOSATConfirmOptions" value="3" style="position:relative;top:3px;" @(Model.SPRDDecision == 3 && !Model.VenderConfirmed ? "" : "disabled") @(Model.SPRDDecision == 3 && Model.VenderConfirmed ? "checked" : "") />
+                                            Acknowledge
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="col-xs-12 panel panel-default" data-ng-controller="getSWBins">
+                                <div class="input-group" style="cursor:pointer">
+                                    <div id="btnCollapseSWBin" class="form-control">
+                                        <span class="pull-left" style="width:20px;font-weight:bold">+</span>
+                                        S/W Bin
+                                    </div>
+                                    <a id="btnExportSwbins" class="input-group-addon">Export</a>
+                                </div>
+                                <div class="collapse" aria-expanded="false" id="collapseSWBin">
+                                    <input type="hidden" id="orderBy" value="" />
+                                    <input type="hidden" id="desc" value="false" />
+                                    <table id="swbinTable" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr id="webinOrderby" role="row" style="cursor:pointer;">
+                                                <th data-orderby="Code" data-desc="true">Code<span></span></th>
+                                                <th data-orderby="IsPassed" data-desc="true">SBL Type<span></span></th>
+                                                <th data-orderby="Defect" data-desc="true">Defect<span></span></th>
+                                                <th data-orderby="Qty" data-desc="true">Qty<span></span></th>
+                                                <th data-orderby="FailRate" data-desc="true">Rate<span></span></th>
+                                                <th data-orderby="Limited" data-desc="true">Limits<span></span></th>
+                                                <!--<th data-orderby="FailedBinPercent" data-desc="true">Percent<span></span></th>-->
+                                            </tr>
+                                        </thead>
+                                        <tr id="swbinsInput">
+                                            <td><input id="inputCode" type="text" class="full-width" /></td>
+                                            <td><input id="inputSBLType" type="text" class="full-width" /></td>
+                                            <td><input id="inputDefect" type="text" class="full-width" /></td>
+                                            <td><input id="inputQty" type="text" class="full-width" /></td>
+                                            <td><input id="inputFailRate" type="text" class="full-width" /></td>
+                                            <td><input id="inputLimits" type="text" class="full-width" /></td>
+                                            <!--<td><input id="inputPercent" type="text"  class="full-width" /></td>-->
+                                        </tr>
+                                        <tbody>
+                                            <tr data-ng-repeat="u in SWdata.rows">
+                                                <td ng-if="u.IsTriggerd=='1'"><span style="color:red">{{u.Code}}</span></td>
+                                                <td ng-if="u.IsTriggerd!='1'">{{u.Code}}</td>
+
+
+                                                <td ng-if="u.IsTriggerd=='1'" style="text-align:left"><span style="color:red">{{u.IsPassed}}</span></td>
+                                                <td ng-if="u.IsTriggerd!='1'" style="text-align:left">{{u.IsPassed}}</td>
+
+                                                <td ng-if="u.IsTriggerd=='1'"><span style="color:red">{{u.Defect}}</span></td>
+                                                <td ng-if="u.IsTriggerd!='1'">{{u.Defect}}</td>
+
+                                                <td ng-if="u.IsTriggerd=='1'" style="text-align:right"><span style="color:red">{{u.Qty}}</span></td>
+                                                <td ng-if="u.IsTriggerd!='1'" style="text-align:right">{{u.Qty}}</td>
+
+
+                                                <td ng-if="u.IsTriggerd=='1'" style="text-align:right"><span style="color:red">{{u.FailRate|number:2}}%</span></td>
+                                                <td ng-if="u.IsTriggerd!='1'" style="text-align:right">{{u.FailRate|number:2}}%</td>
+
+                                                <td style="text-align:right" ng-if="u.Limited!=0 && u.IsTriggerd=='1'"><span style="color:red">{{u.Limited|number:2}}%</span></td>
+                                                <td style="text-align:right" ng-if="u.Limited!=0 && u.IsTriggerd=='2'">{{u.Limited|number:2}}%</td>
+
+                                                <td style="text-align:right" ng-if="u.Limited==0"></td>
+
+
+                                                <!--<td style="text-align:right">{{u.FailedBinPercent|number:2}}%</td>-->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="pager-row">
+                                        <div id="swbinexample">
+                                        </div>
+                                        <div id="custom-pager" class="pull-right">
+                                            <span><span class="currentPage"></span>/<span class="totalPages"></span></span>
+                                            <div class="input-group custom-item">
+                                                <input type="number" class="form-control pageNum" min="1" value="1">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-primary btn-sm goPage" type="button">Go</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="row" style="margin:10px;">
+                        <div>
+                            <textarea class="form-control" rows="5" name="txtComment" id="txtComment" placeholder="Enter comment..."></textarea>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <div class="col-xs-2" style="padding:0px;">
+                                <input type="button" id="uploadButton" style="width:200px;height:50px;" />
+                            </div>
+                            <div class="col-xs-10" id="uploadPrompt"></div>
+                        </div>
+                        <div style="clear:both">
+                            <ul id="attachmentList" class="col-xs-12" style="line-height:25px;list-style:none;"></ul>
+                        </div>
+                        @{ if (UserRole != "OSAT" && UserRole != "OSATAdmin")
+                         {
+                            <div class="row" style="margin:10px 0px;">
+                                <input type="checkbox" name="chkInternal" id="chkInternal" /><label for="chkInternal">&nbsp;Internal</label>
+                            </div>
+                         }
+                        }
+                        <div class="row" style="margin:10px 0px;">
+                            <div class="col-xs-2" style="padding:0px;">
+                                <input type="button" value="Submit" id="btnSubmit" class="btn btn-info btn-block" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <h3 style="border-bottom:1px solid #e2e2e2;padding-bottom:20px;">Comment List</h3>
+                <div class="lia-compoent-lhd-comments" ng-switch="data.rows.length">
+                    <div ng-switch-when="0">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h2 style="color:red">No Comments</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment" ng-switch-default data-ng-repeat="u in data.rows">
+                        <div class="comment-header">
+                            <span class="user-role {{u.OperatorRole}}">{{u.OperatorRole}}</span><span class="user-email">{{u.OperatorName}}(<a href="mailto:{{u.OperatorEmail}}">{{u.OperatorEmail}})</a></span><span class="date-time">{{u.CreateTimeStr}}</span>
+                            <span class="is-new" ng-show="{{u.Opened}}">NEW</span>
+                            <span class="comment-status" ng-show="{{u.Internal}}">Internal</span>
+                            <span class="comment-status disposeStyle_{{u.Dispose}}" ng-if="u.DisposeText!='' && u.DisposeText!=null">{{u.DisposeText}}</span>
+                        </div>
+                        <div class="comment-content" ng-bind-html="u.CommentText">
+                        </div>
+                        <div class="comment-footer">
+                            <a data-ng-repeat="f in u.Attachments" href="{{f.StoreRelativePath+f.OriginalFileName}}" style="margin-right:20px" download><span class='fa fa-paperclip' style="margin-right:5px;"></span>{{f.OriginalFileName}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="pagerComment">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="divOtherBinDispose" tabindex="-1" role="dialog" aria-labelledby="divOtherBinDispose" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" id="btnCancelOtherBinDispose" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h1>Other Bin Dispose</h1>
+            </div>
+            <div class="modal-body text-center">
+                <form class="form-horizontal" id="frmOtherBinDispose" name="frmOtherBinDispose">
+                    <input type="hidden" value="@Model.LotID" name="lotIDForOtherBinDispose" id="lotIDForOtherBinDispose" />
+                    <input type="hidden" id="hidOtherBinDisposeCommentID" value="@Guid.NewGuid().ToString()" name="hidOtherBinDisposeCommentID" />
+                    <input type="hidden" id="hidPEDispose" name="hidPEDispose" />
+                    <textarea class="form-control" id="txtOtherBinDisposeComment" name="txtOtherBinDisposeComment" rows="5" placeholder="Enter comment..."></textarea>
+                    <div class="input-group" style="margin-top:20px;">
+                        <div class="col-xs-2" style="padding:0px;">
+                            <input type="button" id="OtherBinReleaseUploadButton" style="width:200px;height:50px;" />
+                        </div>
+                        <div class="col-xs-10" id="OtherBinReleaseUploadPrompt"></div>
+                        <div style="clear:both">
+                            <ul id="OtherBinReleaseAttachmentList" class="col-xs-12 text-left" style="line-height:25px;list-style:none;"></ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="saveOtherBinDispose">OK</button>
+                <button type="button" class="btn btn-default" id="cancelOtherBinDispose" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

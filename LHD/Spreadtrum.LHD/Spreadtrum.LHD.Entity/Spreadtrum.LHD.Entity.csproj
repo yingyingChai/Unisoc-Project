@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{892B5423-A4A5-43B4-A951-CDF33C7F66A5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Spreadtrum.LHD.Entity</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Spreadtrum.LHD.Entity</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="KaYi.FileSystem">
+      <HintPath>..\Reference\KaYi.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Name>System.ComponentModel.DataAnnotations</Name>
+      <HintPath>System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\AutoJudgeResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Comment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\CommentTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\DecisionUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Lot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\LotQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\LotStatusList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\LotTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\LotView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Lot_Transformed.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Lot_TransformedQuery.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\NotificationswithLot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\SWBin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\TranformedComment.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Vendors.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Wafer.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\WaferQuery.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Wafer_History.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Lots\Wafer_Sbin.cs" />
+    <Compile Include="Spreadtrum.LHD.Entity.Systems\Notification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Systems\NotificationCounter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Systems\NotificationTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Systems\SilicondashOSATConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Systems\UnreadMessageCounter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Users\Group.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Users\OSATUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Users\SPRDUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Users\User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Users\UserGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spreadtrum.LHD.Entity.Users\UserRoles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

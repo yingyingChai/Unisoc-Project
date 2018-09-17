@@ -1,0 +1,14 @@
+﻿.kayiGrid
+{
+    
+}
+
+/*  被选择的行*/
+.selectedRow { background: #FFC;height: 28px;}  
+/* 未被选择的行*/
+.unSelectRow { height: 28px;border-bottom:1px solid #dedede;background: #fff;}
+/*表头 */
+.KaYiGridHeader_Blue { background-color:#2A7AD2; color:White; height:30px; line-height:30px; text-align:center}
+/*普通单元格*/
+.KaYiGridRow_White {color:Black; height:30px; line-height:30px; text-align:center}
+

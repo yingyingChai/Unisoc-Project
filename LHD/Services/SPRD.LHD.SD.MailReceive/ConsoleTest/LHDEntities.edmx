@@ -1,0 +1,1233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SpreadtrumLHDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="COMMENTS">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="CommentText" Type="text" />
+          <Property Name="Operator" Type="varchar" MaxLength="36" />
+          <Property Name="LotID" Type="varchar" MaxLength="36" />
+          <Property Name="RecordState" Type="tinyint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="36" />
+          <Property Name="CommentType" Type="varchar" MaxLength="36" />
+          <Property Name="OperatorName" Type="varchar" MaxLength="255" />
+          <Property Name="OperatorRole" Type="varchar" MaxLength="255" />
+          <Property Name="OperatorBUName" Type="varchar" MaxLength="255" />
+          <Property Name="OperatorEmail" Type="varchar" MaxLength="255" />
+          <Property Name="Internal" Type="bit" />
+          <Property Name="Dispose" Type="int" />
+          <Property Name="DisposeText" Type="varchar" MaxLength="255" />
+          <Property Name="OtherBinDispose" Type="int" />
+        </EntityType>
+        <EntityType Name="EMAILS">
+          <Key>
+            <PropertyRef Name="EmailID" />
+          </Key>
+          <Property Name="EmailID" Type="char" MaxLength="36" Nullable="false" />
+          <Property Name="Sender" Type="varchar" MaxLength="2000" />
+          <Property Name="Cc" Type="varchar" MaxLength="2000" />
+          <Property Name="Recipients" Type="varchar" MaxLength="2000" />
+          <Property Name="Subject" Type="varchar" MaxLength="2000" />
+          <Property Name="HtmlFormat" Type="int" />
+          <Property Name="Body" Type="text" />
+          <Property Name="Priority" Type="int" />
+          <Property Name="State" Type="varchar" MaxLength="255" />
+          <Property Name="NextTryTime" Type="datetime" />
+          <Property Name="TryTime" Type="int" />
+          <Property Name="AccountIDs" Type="text" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpreadtrumLHD.dbo.FILE_HITS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FILE_HITS">
+          <Key>
+            <PropertyRef Name="HitID" />
+          </Key>
+          <Property Name="HitID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="HitTime" Type="datetime" />
+          <Property Name="FileID" Type="varchar" MaxLength="36" />
+          <Property Name="SessionID" Type="varchar" MaxLength="36" />
+          <Property Name="ClientID" Type="varchar" MaxLength="36" />
+          <Property Name="HitType" Type="varchar" MaxLength="36" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateStamp" Type="varchar" MaxLength="36" />
+        </EntityType>
+        <EntityType Name="FILES">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="char" MaxLength="36" Nullable="false" />
+          <Property Name="OwnerID" Type="char" MaxLength="36" Nullable="false" />
+          <Property Name="ParentID" Type="char" MaxLength="36" />
+          <Property Name="FileType" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="TokenID" Type="char" MaxLength="36" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="OriginalFileName" Type="varchar" MaxLength="1000" />
+          <Property Name="ExtendFileName" Type="varchar" MaxLength="255" />
+          <Property Name="Title" Type="varchar" MaxLength="1000" />
+          <Property Name="Keyword" Type="varchar" MaxLength="1000" />
+          <Property Name="Memo" Type="varchar" MaxLength="2000" />
+          <Property Name="StorageAbsoluteFileName" Type="varchar" MaxLength="4000" />
+          <Property Name="StoreAbsolutePath" Type="varchar" MaxLength="4000" />
+          <Property Name="StoreRelativePath" Type="varchar" MaxLength="4000" />
+          <Property Name="PDFAbsoluteFileName" Type="varchar" MaxLength="4000" />
+          <Property Name="PDFAbsolutePath" Type="varchar" MaxLength="4000" />
+          <Property Name="PDFRelativePath" Type="varchar" MaxLength="4000" />
+          <Property Name="ConvertToPDFSuccessed" Type="bit" />
+          <Property Name="Tag" Type="char" MaxLength="36" />
+          <Property Name="FileState" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FileSize" Type="bigint" />
+          <Property Name="ClientIP" Type="varchar" MaxLength="50" />
+          <Property Name="ContentType" Type="varchar" MaxLength="1000" />
+          <Property Name="UploaderID" Type="char" MaxLength="36" />
+          <Property Name="RelativeProjectNames" Type="varchar" MaxLength="4000" />
+          <Property Name="RelativeUserNames" Type="varchar" MaxLength="4000" />
+          <Property Name="Thumbnail" Type="varchar" MaxLength="4000" />
+          <Property Name="Sequence" Type="int" />
+          <Property Name="QuickID" Type="varchar" MaxLength="255" />
+          <Property Name="CategoryQueryIDs" Type="varchar" MaxLength="5000" />
+          <Property Name="PayLevel" Type="tinyint" />
+          <Property Name="SecretLevel" Type="tinyint" />
+          <Property Name="LargeThumbnail" Type="varchar" MaxLength="4000" />
+          <Property Name="DisplayInNotifications" Type="bit" />
+          <Property Name="PublicReview" Type="bit" />
+          <Property Name="PublicDownload" Type="bit" />
+          <Property Name="PreviewAfterPermit" Type="bit" />
+          <Property Name="DownloadAfterPermit" Type="bit" />
+          <Property Name="DownloadTimes" Type="int" />
+          <Property Name="OpenedTimes" Type="int" />
+          <Property Name="ReadCount" Type="int" />
+          <Property Name="OwnerName" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="GROUPS">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="Grade" Type="int" />
+          <Property Name="ParentGroupID" Type="varchar" MaxLength="36" />
+          <Property Name="Title" Type="varchar" MaxLength="255" />
+          <Property Name="GroupType" Type="tinyint" />
+          <Property Name="RelatedBUID" Type="varchar" MaxLength="36" />
+          <Property Name="RecordState" Type="tinyint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="36" />
+        </EntityType>
+        <EntityType Name="LOT_STATUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="StatusDescription" Type="varchar" MaxLength="2000" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="36" />
+          <Property Name="Sequence" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="LOT_STATUS_LIST">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="QADispose" Type="int" />
+          <Property Name="PEDispose" Type="int" />
+          <Property Name="OtherBinDispose" Type="bit" />
+          <Property Name="SPRDDecision" Type="int" />
+          <Property Name="VenderConfirmed" Type="bit" />
+          <Property Name="OtherBinDisposeConfirmed" Type="bit" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="LOTS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="LotID" Type="varchar" MaxLength="36" />
+          <Property Name="VenderID" Type="varchar" MaxLength="36" />
+          <Property Name="AutoJudgeResult" Type="varchar" MaxLength="255" />
+          <Property Name="HoldReason" Type="varchar" MaxLength="2000" />
+          <Property Name="ManualHold" Type="bit" />
+          <Property Name="QADispose" Type="tinyint" />
+          <Property Name="PEDispose" Type="tinyint" />
+          <Property Name="SPRDDecision" Type="tinyint" />
+          <Property Name="DeviceCode" Type="varchar" MaxLength="255" />
+          <Property Name="DeviceName" Type="varchar" MaxLength="255" />
+          <Property Name="LotType" Type="varchar" MaxLength="255" />
+          <Property Name="LotNO" Type="varchar" MaxLength="255" />
+          <Property Name="SubconLot" Type="varchar" MaxLength="255" />
+          <Property Name="TestProgram" Type="varchar" MaxLength="255" />
+          <Property Name="CompletionDate" Type="smalldatetime" />
+          <Property Name="Die1LotNO" Type="varchar" MaxLength="255" />
+          <Property Name="Die1CP" Type="varchar" MaxLength="255" />
+          <Property Name="Die2LotNO" Type="varchar" MaxLength="255" />
+          <Property Name="Die2CP" Type="varchar" MaxLength="255" />
+          <Property Name="Die3LotNO" Type="varchar" MaxLength="255" />
+          <Property Name="Die3CP" Type="varchar" MaxLength="255" />
+          <Property Name="Die4LotNO" Type="varchar" MaxLength="255" />
+          <Property Name="Die4CP" Type="varchar" MaxLength="255" />
+          <Property Name="QtyIn" Type="int" />
+          <Property Name="Yield" Type="float" />
+          <Property Name="OSRate" Type="varchar" MaxLength="255" />
+          <Property Name="Loss" Type="int" />
+          <Property Name="Damage" Type="int" />
+          <Property Name="Bin1" Type="int" />
+          <Property Name="Bin2" Type="int" />
+          <Property Name="Bin3" Type="int" />
+          <Property Name="Bin4" Type="int" />
+          <Property Name="Bin5" Type="int" />
+          <Property Name="Bin6" Type="int" />
+          <Property Name="Bin7" Type="int" />
+          <Property Name="RetestTimes" Type="int" />
+          <Property Name="TesterID" Type="varchar" MaxLength="255" />
+          <Property Name="Platforms" Type="varchar" MaxLength="255" />
+          <Property Name="LBNO" Type="varchar" MaxLength="255" />
+          <Property Name="Version" Type="int" />
+          <Property Name="OperatorID" Type="varchar" MaxLength="36" />
+          <Property Name="OperateTime" Type="datetime" />
+          <Property Name="PreviousRecordID" Type="varchar" MaxLength="36" />
+          <Property Name="VenderConfirmed" Type="bit" />
+          <Property Name="RecordState" Type="tinyint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="512" />
+          <Property Name="Status" Type="varchar" MaxLength="36" />
+          <Property Name="VenderJudgeResult" Type="varchar" MaxLength="36" />
+          <Property Name="QADisposeText" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+          <Property Name="PEDisposeText" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+          <Property Name="SPRDDecisionText" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+          <Property Name="OperatorName" Type="varchar" MaxLength="255" />
+          <Property Name="VersionID" Type="int" />
+          <Property Name="RecordType" Type="varchar" MaxLength="255" />
+          <Property Name="OperateType" Type="varchar" MaxLength="255" />
+          <Property Name="Bin8" Type="int" />
+          <Property Name="Bin9" Type="int" />
+          <Property Name="Bin10" Type="int" />
+          <Property Name="OtherBinDispose" Type="bit" />
+          <Property Name="LastDecision" Type="int" />
+          <Property Name="SDStates" Type="int" />
+          <Property Name="OtherBinDisposeConfirmed" Type="bit" />
+          <Property Name="OtherBinDisposeConfirmTime" Type="datetime" />
+          <Property Name="QADisposeTime" Type="datetime" />
+          <Property Name="PEDisposeTime" Type="datetime" />
+          <Property Name="VenderConfirmTime" Type="datetime" />
+          <Property Name="LotJudgementMessage" Type="text" />
+          <Property Name="Stage" Type="varchar" MaxLength="255" />
+          <Property Name="CustomerLotId" Type="varchar" MaxLength="255" />
+          <Property Name="Url" Type="varchar" MaxLength="4096" />
+        </EntityType>
+        <EntityType Name="LOTSImportLogs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="FormatStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormatTime" Type="datetime" />
+          <Property Name="ImportLHDStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImportLHDTime" Type="datetime" />
+          <Property Name="LotNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="Device" Type="nvarchar" MaxLength="50" />
+          <Property Name="Stage" Type="nvarchar" MaxLength="50" />
+          <Property Name="Logs" Type="nvarchar(max)" />
+          <Property Name="osatID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LOTSImportSDLogs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OSAT" Type="nvarchar" MaxLength="50" />
+          <Property Name="Device" Type="nvarchar" MaxLength="50" />
+          <Property Name="LotNO" Type="nvarchar" MaxLength="200" />
+          <Property Name="Stage" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeliveryDate" Type="datetime" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="LHDFormatStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="LHDImportStatus" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NOTIFICATIONS">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="RecipientID" Type="varchar" MaxLength="36" />
+          <Property Name="NotificationType" Type="varchar" MaxLength="255" />
+          <Property Name="Message" Type="varchar" MaxLength="3000" />
+          <Property Name="LotID" Type="varchar" MaxLength="36" />
+          <Property Name="EmailID" Type="varchar" MaxLength="36" />
+          <Property Name="Opened" Type="bit" />
+          <Property Name="ReadTime" Type="datetime" />
+          <Property Name="RecordState" Type="tinyint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="36" />
+        </EntityType>
+        <EntityType Name="SILICONDASH_INTEGRATION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MessageId" Type="varchar" MaxLength="255" />
+          <Property Name="MessageContent" Type="text" />
+          <Property Name="CreateTime" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="SILICONDASH_OSAT_CONFIGURATIONS">
+          <Key>
+            <PropertyRef Name="ConfigurationID" />
+          </Key>
+          <Property Name="ConfigurationID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="OSATID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="URI" Type="varchar" MaxLength="512" />
+          <Property Name="LoginID" Type="varchar" MaxLength="255" />
+          <Property Name="LoginPWD" Type="varchar" MaxLength="255" />
+          <Property Name="InboundChannel" Type="varchar" MaxLength="512" />
+          <Property Name="OutboundChannel" Type="varchar" MaxLength="512" />
+          <Property Name="MessageInDirectory" Type="varchar" MaxLength="512" />
+          <Property Name="MessageOutDirectory" Type="varchar" MaxLength="512" />
+          <Property Name="States" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SW_BIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="LotID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="Code" Type="int" />
+          <Property Name="Defect" Type="varchar" MaxLength="255" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="FailRate" Type="float" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="36" />
+          <Property Name="RecordState" Type="tinyint" />
+          <Property Name="IsPassed" Type="varchar" MaxLength="255" />
+          <Property Name="Limited" Type="float" />
+          <Property Name="IsTriggerd" Type="varchar" MaxLength="255" />
+          <Property Name="FailedBinPercent" Type="decimal" Precision="18" Scale="18" />
+        </EntityType>
+        <EntityType Name="URLS">
+          <Key>
+            <PropertyRef Name="UrlID" />
+          </Key>
+          <Property Name="UrlID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UrlPath" Type="varchar" MaxLength="512" />
+          <Property Name="NavigatorID" Type="varchar" MaxLength="255" />
+          <Property Name="AllowRoles" Type="varchar" MaxLength="1024" />
+          <Property Name="PageUrl" Type="varchar" MaxLength="1024" />
+          <Property Name="Title" Type="varchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="USER_GROUPS">
+          <Key>
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserGroupID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="JoinTime" Type="smalldatetime" />
+          <Property Name="GroupID" Type="varchar" MaxLength="255" />
+          <Property Name="AccountID" Type="varchar" MaxLength="255" />
+          <Property Name="QuitTime" Type="smalldatetime" />
+          <Property Name="RecordState" Type="tinyint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="LoginPassword" Type="varchar" MaxLength="255" />
+          <Property Name="AccountState" Type="int" />
+          <Property Name="FullName" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="AccountType" Type="tinyint" />
+          <Property Name="ThirdpartyLoginProvider" Type="varchar" MaxLength="36" />
+          <Property Name="ThirdpartyAccountID" Type="varchar" MaxLength="36" />
+          <Property Name="Remarks" Type="varchar" MaxLength="2000" />
+          <Property Name="RecordState" Type="tinyint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="36" />
+          <Property Name="Role" Type="varchar" MaxLength="36" />
+          <Property Name="BUName" Type="varchar" MaxLength="255" />
+          <Property Name="NewComments" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+          <Property Name="WaitForDispose" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+          <Property Name="WaitForConfirm" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+          <Property Name="WaitForOtherBinDispose" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+          <Property Name="EQALots" Type="varchar" MaxLength="255" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="VENDORS">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="varchar" MaxLength="36" Nullable="false" />
+          <Property Name="VendorName" Type="varchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Remarks" Type="varchar" MaxLength="2000" />
+          <Property Name="RecordState" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="LastOperator" Type="varchar" MaxLength="36" />
+        </EntityType>
+        <EntityContainer Name="SpreadtrumLHDModelStoreContainer">
+          <EntitySet Name="COMMENTS" EntityType="Self.COMMENTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMAILS" EntityType="Self.EMAILS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FILES" EntityType="Self.FILES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GROUPS" EntityType="Self.GROUPS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOT_STATUS" EntityType="Self.LOT_STATUS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOT_STATUS_LIST" EntityType="Self.LOT_STATUS_LIST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOTS" EntityType="Self.LOTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOTSImportLogs" EntityType="Self.LOTSImportLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOTSImportSDLogs" EntityType="Self.LOTSImportSDLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOTIFICATIONS" EntityType="Self.NOTIFICATIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SILICONDASH_INTEGRATION" EntityType="Self.SILICONDASH_INTEGRATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SILICONDASH_OSAT_CONFIGURATIONS" EntityType="Self.SILICONDASH_OSAT_CONFIGURATIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SW_BIN" EntityType="Self.SW_BIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="URLS" EntityType="Self.URLS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USER_GROUPS" EntityType="Self.USER_GROUPS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VENDORS" EntityType="Self.VENDORS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FILE_HITS" EntityType="Self.FILE_HITS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[FILE_HITS].[HitID] AS [HitID], 
+[FILE_HITS].[HitTime] AS [HitTime], 
+[FILE_HITS].[FileID] AS [FileID], 
+[FILE_HITS].[SessionID] AS [SessionID], 
+[FILE_HITS].[ClientID] AS [ClientID], 
+[FILE_HITS].[HitType] AS [HitType], 
+[FILE_HITS].[CreateTime] AS [CreateTime], 
+[FILE_HITS].[UpdateTime] AS [UpdateTime], 
+[FILE_HITS].[UpdateStamp] AS [UpdateStamp]
+FROM [dbo].[FILE_HITS] AS [FILE_HITS]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SpreadtrumLHDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="COMMENTS">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CommentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Operator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="LotID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="RecordState" Type="Byte" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="CommentType" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="OperatorName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="OperatorRole" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="OperatorBUName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="OperatorEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Internal" Type="Boolean" />
+          <Property Name="Dispose" Type="Int32" />
+          <Property Name="DisposeText" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="OtherBinDispose" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EMAILS">
+          <Key>
+            <PropertyRef Name="EmailID" />
+          </Key>
+          <Property Name="EmailID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Sender" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Cc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Recipients" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Subject" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="HtmlFormat" Type="Int32" />
+          <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Priority" Type="Int32" />
+          <Property Name="State" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NextTryTime" Type="DateTime" Precision="3" />
+          <Property Name="TryTime" Type="Int32" />
+          <Property Name="AccountIDs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FILES">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="OwnerID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ParentID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+          <Property Name="FileType" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TokenID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="OriginalFileName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ExtendFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Memo" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="StorageAbsoluteFileName" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="StoreAbsolutePath" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="StoreRelativePath" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="PDFAbsoluteFileName" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="PDFAbsolutePath" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="PDFRelativePath" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="ConvertToPDFSuccessed" Type="Boolean" />
+          <Property Name="Tag" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+          <Property Name="FileState" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FileSize" Type="Int64" />
+          <Property Name="ClientIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContentType" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="UploaderID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+          <Property Name="RelativeProjectNames" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="RelativeUserNames" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="Thumbnail" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="Sequence" Type="Int32" />
+          <Property Name="QuickID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryQueryIDs" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="PayLevel" Type="Byte" />
+          <Property Name="SecretLevel" Type="Byte" />
+          <Property Name="LargeThumbnail" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="DisplayInNotifications" Type="Boolean" />
+          <Property Name="PublicReview" Type="Boolean" />
+          <Property Name="PublicDownload" Type="Boolean" />
+          <Property Name="PreviewAfterPermit" Type="Boolean" />
+          <Property Name="DownloadAfterPermit" Type="Boolean" />
+          <Property Name="DownloadTimes" Type="Int32" />
+          <Property Name="OpenedTimes" Type="Int32" />
+          <Property Name="ReadCount" Type="Int32" />
+          <Property Name="OwnerName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GROUPS">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Grade" Type="Int32" />
+          <Property Name="ParentGroupID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="GroupType" Type="Byte" />
+          <Property Name="RelatedBUID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="RecordState" Type="Byte" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LOT_STATUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="StatusDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Sequence" Type="Byte" />
+        </EntityType>
+        <EntityType Name="LOT_STATUS_LIST">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QADispose" Type="Int32" />
+          <Property Name="PEDispose" Type="Int32" />
+          <Property Name="OtherBinDispose" Type="Boolean" />
+          <Property Name="SPRDDecision" Type="Int32" />
+          <Property Name="VenderConfirmed" Type="Boolean" />
+          <Property Name="OtherBinDisposeConfirmed" Type="Boolean" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LOTS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LotID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="VenderID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="AutoJudgeResult" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="HoldReason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="ManualHold" Type="Boolean" />
+          <Property Name="QADispose" Type="Byte" />
+          <Property Name="PEDispose" Type="Byte" />
+          <Property Name="SPRDDecision" Type="Byte" />
+          <Property Name="DeviceCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DeviceName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LotType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LotNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SubconLot" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TestProgram" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="0" />
+          <Property Name="Die1LotNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Die1CP" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Die2LotNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Die2CP" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Die3LotNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Die3CP" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Die4LotNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Die4CP" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="QtyIn" Type="Int32" />
+          <Property Name="Yield" Type="Double" />
+          <Property Name="OSRate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Loss" Type="Int32" />
+          <Property Name="Damage" Type="Int32" />
+          <Property Name="Bin1" Type="Int32" />
+          <Property Name="Bin2" Type="Int32" />
+          <Property Name="Bin3" Type="Int32" />
+          <Property Name="Bin4" Type="Int32" />
+          <Property Name="Bin5" Type="Int32" />
+          <Property Name="Bin6" Type="Int32" />
+          <Property Name="Bin7" Type="Int32" />
+          <Property Name="RetestTimes" Type="Int32" />
+          <Property Name="TesterID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Platforms" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LBNO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Version" Type="Int32" />
+          <Property Name="OperatorID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="OperateTime" Type="DateTime" Precision="3" />
+          <Property Name="PreviousRecordID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="VenderConfirmed" Type="Boolean" />
+          <Property Name="RecordState" Type="Byte" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="VenderJudgeResult" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="QADisposeText" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="PEDisposeText" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SPRDDecisionText" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="OperatorName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="VersionID" Type="Int32" />
+          <Property Name="RecordType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="OperateType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Bin8" Type="Int32" />
+          <Property Name="Bin9" Type="Int32" />
+          <Property Name="Bin10" Type="Int32" />
+          <Property Name="OtherBinDispose" Type="Boolean" />
+          <Property Name="LastDecision" Type="Int32" />
+          <Property Name="SDStates" Type="Int32" />
+          <Property Name="OtherBinDisposeConfirmed" Type="Boolean" />
+          <Property Name="OtherBinDisposeConfirmTime" Type="DateTime" Precision="3" />
+          <Property Name="QADisposeTime" Type="DateTime" Precision="3" />
+          <Property Name="PEDisposeTime" Type="DateTime" Precision="3" />
+          <Property Name="VenderConfirmTime" Type="DateTime" Precision="3" />
+          <Property Name="LotJudgementMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Stage" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerLotId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LOTSImportLogs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="FormatStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormatTime" Type="DateTime" Precision="3" />
+          <Property Name="ImportLHDStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImportLHDTime" Type="DateTime" Precision="3" />
+          <Property Name="LotNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Device" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Logs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="osatID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LOTSImportSDLogs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OSAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Device" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LotNO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Stage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="LHDFormatStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LHDImportStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NOTIFICATIONS">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RecipientID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="NotificationType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+          <Property Name="LotID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="EmailID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Opened" Type="Boolean" />
+          <Property Name="ReadTime" Type="DateTime" Precision="3" />
+          <Property Name="RecordState" Type="Byte" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SILICONDASH_INTEGRATION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="MessageId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MessageContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="Guid" />
+        </EntityType>
+        <EntityType Name="SILICONDASH_OSAT_CONFIGURATIONS">
+          <Key>
+            <PropertyRef Name="ConfigurationID" />
+          </Key>
+          <Property Name="ConfigurationID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OSATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="URI" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="LoginID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LoginPWD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="InboundChannel" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="OutboundChannel" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="MessageInDirectory" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="MessageOutDirectory" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="States" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SW_BIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LotID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Code" Type="Int32" />
+          <Property Name="Defect" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Qty" Type="Int32" />
+          <Property Name="FailRate" Type="Double" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="RecordState" Type="Byte" />
+          <Property Name="IsPassed" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Limited" Type="Double" />
+          <Property Name="IsTriggerd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FailedBinPercent" Type="Decimal" Precision="18" Scale="18" />
+        </EntityType>
+        <EntityType Name="URLS">
+          <Key>
+            <PropertyRef Name="UrlID" />
+          </Key>
+          <Property Name="UrlID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UrlPath" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="NavigatorID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AllowRoles" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="PageUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USER_GROUPS">
+          <Key>
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserGroupID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="JoinTime" Type="DateTime" Precision="0" />
+          <Property Name="GroupID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AccountID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="QuitTime" Type="DateTime" Precision="0" />
+          <Property Name="RecordState" Type="Byte" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LoginPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AccountState" Type="Int32" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AccountType" Type="Byte" />
+          <Property Name="ThirdpartyLoginProvider" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="ThirdpartyAccountID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="RecordState" Type="Byte" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Role" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="BUName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NewComments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="WaitForDispose" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="WaitForConfirm" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="WaitForOtherBinDispose" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EQALots" Type="String" MaxLength="255" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="VENDORS">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VendorName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Remarks" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="RecordState" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastOperator" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FILE_HITS">
+          <Key>
+            <PropertyRef Name="HitID" />
+          </Key>
+          <Property Name="HitID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HitTime" Type="DateTime" Precision="3" />
+          <Property Name="FileID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="SessionID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="ClientID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="HitType" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateStamp" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SpreadtrumLHDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="COMMENTS" EntityType="Self.COMMENTS" />
+          <EntitySet Name="EMAILS" EntityType="Self.EMAILS" />
+          <EntitySet Name="FILES" EntityType="Self.FILES" />
+          <EntitySet Name="GROUPS" EntityType="Self.GROUPS" />
+          <EntitySet Name="LOT_STATUS" EntityType="Self.LOT_STATUS" />
+          <EntitySet Name="LOT_STATUS_LIST" EntityType="Self.LOT_STATUS_LIST" />
+          <EntitySet Name="LOTS" EntityType="Self.LOTS" />
+          <EntitySet Name="LOTSImportLogs" EntityType="Self.LOTSImportLogs" />
+          <EntitySet Name="LOTSImportSDLogs" EntityType="Self.LOTSImportSDLogs" />
+          <EntitySet Name="NOTIFICATIONS" EntityType="Self.NOTIFICATIONS" />
+          <EntitySet Name="SILICONDASH_INTEGRATION" EntityType="Self.SILICONDASH_INTEGRATION" />
+          <EntitySet Name="SILICONDASH_OSAT_CONFIGURATIONS" EntityType="Self.SILICONDASH_OSAT_CONFIGURATIONS" />
+          <EntitySet Name="SW_BIN" EntityType="Self.SW_BIN" />
+          <EntitySet Name="URLS" EntityType="Self.URLS" />
+          <EntitySet Name="USER_GROUPS" EntityType="Self.USER_GROUPS" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" />
+          <EntitySet Name="VENDORS" EntityType="Self.VENDORS" />
+          <EntitySet Name="FILE_HITS" EntityType="Self.FILE_HITS" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SpreadtrumLHDModelStoreContainer" CdmEntityContainer="SpreadtrumLHDEntities">
+          <EntitySetMapping Name="COMMENTS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.COMMENTS">
+              <MappingFragment StoreEntitySet="COMMENTS">
+                <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+                <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="LotID" ColumnName="LotID" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+                <ScalarProperty Name="CommentType" ColumnName="CommentType" />
+                <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
+                <ScalarProperty Name="OperatorRole" ColumnName="OperatorRole" />
+                <ScalarProperty Name="OperatorBUName" ColumnName="OperatorBUName" />
+                <ScalarProperty Name="OperatorEmail" ColumnName="OperatorEmail" />
+                <ScalarProperty Name="Internal" ColumnName="Internal" />
+                <ScalarProperty Name="Dispose" ColumnName="Dispose" />
+                <ScalarProperty Name="DisposeText" ColumnName="DisposeText" />
+                <ScalarProperty Name="OtherBinDispose" ColumnName="OtherBinDispose" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMAILS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.EMAILS">
+              <MappingFragment StoreEntitySet="EMAILS">
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Sender" ColumnName="Sender" />
+                <ScalarProperty Name="Cc" ColumnName="Cc" />
+                <ScalarProperty Name="Recipients" ColumnName="Recipients" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="HtmlFormat" ColumnName="HtmlFormat" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="NextTryTime" ColumnName="NextTryTime" />
+                <ScalarProperty Name="TryTime" ColumnName="TryTime" />
+                <ScalarProperty Name="AccountIDs" ColumnName="AccountIDs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FILES">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.FILES">
+              <MappingFragment StoreEntitySet="FILES">
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="TokenID" ColumnName="TokenID" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="OriginalFileName" ColumnName="OriginalFileName" />
+                <ScalarProperty Name="ExtendFileName" ColumnName="ExtendFileName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="StorageAbsoluteFileName" ColumnName="StorageAbsoluteFileName" />
+                <ScalarProperty Name="StoreAbsolutePath" ColumnName="StoreAbsolutePath" />
+                <ScalarProperty Name="StoreRelativePath" ColumnName="StoreRelativePath" />
+                <ScalarProperty Name="PDFAbsoluteFileName" ColumnName="PDFAbsoluteFileName" />
+                <ScalarProperty Name="PDFAbsolutePath" ColumnName="PDFAbsolutePath" />
+                <ScalarProperty Name="PDFRelativePath" ColumnName="PDFRelativePath" />
+                <ScalarProperty Name="ConvertToPDFSuccessed" ColumnName="ConvertToPDFSuccessed" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="FileState" ColumnName="FileState" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+                <ScalarProperty Name="UploaderID" ColumnName="UploaderID" />
+                <ScalarProperty Name="RelativeProjectNames" ColumnName="RelativeProjectNames" />
+                <ScalarProperty Name="RelativeUserNames" ColumnName="RelativeUserNames" />
+                <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="QuickID" ColumnName="QuickID" />
+                <ScalarProperty Name="CategoryQueryIDs" ColumnName="CategoryQueryIDs" />
+                <ScalarProperty Name="PayLevel" ColumnName="PayLevel" />
+                <ScalarProperty Name="SecretLevel" ColumnName="SecretLevel" />
+                <ScalarProperty Name="LargeThumbnail" ColumnName="LargeThumbnail" />
+                <ScalarProperty Name="DisplayInNotifications" ColumnName="DisplayInNotifications" />
+                <ScalarProperty Name="PublicReview" ColumnName="PublicReview" />
+                <ScalarProperty Name="PublicDownload" ColumnName="PublicDownload" />
+                <ScalarProperty Name="PreviewAfterPermit" ColumnName="PreviewAfterPermit" />
+                <ScalarProperty Name="DownloadAfterPermit" ColumnName="DownloadAfterPermit" />
+                <ScalarProperty Name="DownloadTimes" ColumnName="DownloadTimes" />
+                <ScalarProperty Name="OpenedTimes" ColumnName="OpenedTimes" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUPS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.GROUPS">
+              <MappingFragment StoreEntitySet="GROUPS">
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+                <ScalarProperty Name="RelatedBUID" ColumnName="RelatedBUID" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOT_STATUS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.LOT_STATUS">
+              <MappingFragment StoreEntitySet="LOT_STATUS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOT_STATUS_LIST">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.LOT_STATUS_LIST">
+              <MappingFragment StoreEntitySet="LOT_STATUS_LIST">
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="QADispose" ColumnName="QADispose" />
+                <ScalarProperty Name="PEDispose" ColumnName="PEDispose" />
+                <ScalarProperty Name="OtherBinDispose" ColumnName="OtherBinDispose" />
+                <ScalarProperty Name="SPRDDecision" ColumnName="SPRDDecision" />
+                <ScalarProperty Name="VenderConfirmed" ColumnName="VenderConfirmed" />
+                <ScalarProperty Name="OtherBinDisposeConfirmed" ColumnName="OtherBinDisposeConfirmed" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOTS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.LOTS">
+              <MappingFragment StoreEntitySet="LOTS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LotID" ColumnName="LotID" />
+                <ScalarProperty Name="VenderID" ColumnName="VenderID" />
+                <ScalarProperty Name="AutoJudgeResult" ColumnName="AutoJudgeResult" />
+                <ScalarProperty Name="HoldReason" ColumnName="HoldReason" />
+                <ScalarProperty Name="ManualHold" ColumnName="ManualHold" />
+                <ScalarProperty Name="QADispose" ColumnName="QADispose" />
+                <ScalarProperty Name="PEDispose" ColumnName="PEDispose" />
+                <ScalarProperty Name="SPRDDecision" ColumnName="SPRDDecision" />
+                <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+                <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+                <ScalarProperty Name="LotType" ColumnName="LotType" />
+                <ScalarProperty Name="LotNO" ColumnName="LotNO" />
+                <ScalarProperty Name="SubconLot" ColumnName="SubconLot" />
+                <ScalarProperty Name="TestProgram" ColumnName="TestProgram" />
+                <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+                <ScalarProperty Name="Die1LotNO" ColumnName="Die1LotNO" />
+                <ScalarProperty Name="Die1CP" ColumnName="Die1CP" />
+                <ScalarProperty Name="Die2LotNO" ColumnName="Die2LotNO" />
+                <ScalarProperty Name="Die2CP" ColumnName="Die2CP" />
+                <ScalarProperty Name="Die3LotNO" ColumnName="Die3LotNO" />
+                <ScalarProperty Name="Die3CP" ColumnName="Die3CP" />
+                <ScalarProperty Name="Die4LotNO" ColumnName="Die4LotNO" />
+                <ScalarProperty Name="Die4CP" ColumnName="Die4CP" />
+                <ScalarProperty Name="QtyIn" ColumnName="QtyIn" />
+                <ScalarProperty Name="Yield" ColumnName="Yield" />
+                <ScalarProperty Name="OSRate" ColumnName="OSRate" />
+                <ScalarProperty Name="Loss" ColumnName="Loss" />
+                <ScalarProperty Name="Damage" ColumnName="Damage" />
+                <ScalarProperty Name="Bin1" ColumnName="Bin1" />
+                <ScalarProperty Name="Bin2" ColumnName="Bin2" />
+                <ScalarProperty Name="Bin3" ColumnName="Bin3" />
+                <ScalarProperty Name="Bin4" ColumnName="Bin4" />
+                <ScalarProperty Name="Bin5" ColumnName="Bin5" />
+                <ScalarProperty Name="Bin6" ColumnName="Bin6" />
+                <ScalarProperty Name="Bin7" ColumnName="Bin7" />
+                <ScalarProperty Name="RetestTimes" ColumnName="RetestTimes" />
+                <ScalarProperty Name="TesterID" ColumnName="TesterID" />
+                <ScalarProperty Name="Platforms" ColumnName="Platforms" />
+                <ScalarProperty Name="LBNO" ColumnName="LBNO" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="OperatorID" ColumnName="OperatorID" />
+                <ScalarProperty Name="OperateTime" ColumnName="OperateTime" />
+                <ScalarProperty Name="PreviousRecordID" ColumnName="PreviousRecordID" />
+                <ScalarProperty Name="VenderConfirmed" ColumnName="VenderConfirmed" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="VenderJudgeResult" ColumnName="VenderJudgeResult" />
+                <ScalarProperty Name="QADisposeText" ColumnName="QADisposeText" />
+                <ScalarProperty Name="PEDisposeText" ColumnName="PEDisposeText" />
+                <ScalarProperty Name="SPRDDecisionText" ColumnName="SPRDDecisionText" />
+                <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
+                <ScalarProperty Name="VersionID" ColumnName="VersionID" />
+                <ScalarProperty Name="RecordType" ColumnName="RecordType" />
+                <ScalarProperty Name="OperateType" ColumnName="OperateType" />
+                <ScalarProperty Name="Bin8" ColumnName="Bin8" />
+                <ScalarProperty Name="Bin9" ColumnName="Bin9" />
+                <ScalarProperty Name="Bin10" ColumnName="Bin10" />
+                <ScalarProperty Name="OtherBinDispose" ColumnName="OtherBinDispose" />
+                <ScalarProperty Name="LastDecision" ColumnName="LastDecision" />
+                <ScalarProperty Name="SDStates" ColumnName="SDStates" />
+                <ScalarProperty Name="OtherBinDisposeConfirmed" ColumnName="OtherBinDisposeConfirmed" />
+                <ScalarProperty Name="OtherBinDisposeConfirmTime" ColumnName="OtherBinDisposeConfirmTime" />
+                <ScalarProperty Name="QADisposeTime" ColumnName="QADisposeTime" />
+                <ScalarProperty Name="PEDisposeTime" ColumnName="PEDisposeTime" />
+                <ScalarProperty Name="VenderConfirmTime" ColumnName="VenderConfirmTime" />
+                <ScalarProperty Name="LotJudgementMessage" ColumnName="LotJudgementMessage" />
+                <ScalarProperty Name="Stage" ColumnName="Stage" />
+                <ScalarProperty Name="CustomerLotId" ColumnName="CustomerLotId" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOTSImportLogs">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.LOTSImportLogs">
+              <MappingFragment StoreEntitySet="LOTSImportLogs">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="FormatStatus" ColumnName="FormatStatus" />
+                <ScalarProperty Name="FormatTime" ColumnName="FormatTime" />
+                <ScalarProperty Name="ImportLHDStatus" ColumnName="ImportLHDStatus" />
+                <ScalarProperty Name="ImportLHDTime" ColumnName="ImportLHDTime" />
+                <ScalarProperty Name="LotNO" ColumnName="LotNO" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="Stage" ColumnName="Stage" />
+                <ScalarProperty Name="Logs" ColumnName="Logs" />
+                <ScalarProperty Name="osatID" ColumnName="osatID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOTSImportSDLogs">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.LOTSImportSDLogs">
+              <MappingFragment StoreEntitySet="LOTSImportSDLogs">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OSAT" ColumnName="OSAT" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="LotNO" ColumnName="LotNO" />
+                <ScalarProperty Name="Stage" ColumnName="Stage" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LHDFormatStatus" ColumnName="LHDFormatStatus" />
+                <ScalarProperty Name="LHDImportStatus" ColumnName="LHDImportStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NOTIFICATIONS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.NOTIFICATIONS">
+              <MappingFragment StoreEntitySet="NOTIFICATIONS">
+                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+                <ScalarProperty Name="RecipientID" ColumnName="RecipientID" />
+                <ScalarProperty Name="NotificationType" ColumnName="NotificationType" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="LotID" ColumnName="LotID" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Opened" ColumnName="Opened" />
+                <ScalarProperty Name="ReadTime" ColumnName="ReadTime" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SILICONDASH_INTEGRATION">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.SILICONDASH_INTEGRATION">
+              <MappingFragment StoreEntitySet="SILICONDASH_INTEGRATION">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+                <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SILICONDASH_OSAT_CONFIGURATIONS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.SILICONDASH_OSAT_CONFIGURATIONS">
+              <MappingFragment StoreEntitySet="SILICONDASH_OSAT_CONFIGURATIONS">
+                <ScalarProperty Name="ConfigurationID" ColumnName="ConfigurationID" />
+                <ScalarProperty Name="OSATID" ColumnName="OSATID" />
+                <ScalarProperty Name="URI" ColumnName="URI" />
+                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+                <ScalarProperty Name="LoginPWD" ColumnName="LoginPWD" />
+                <ScalarProperty Name="InboundChannel" ColumnName="InboundChannel" />
+                <ScalarProperty Name="OutboundChannel" ColumnName="OutboundChannel" />
+                <ScalarProperty Name="MessageInDirectory" ColumnName="MessageInDirectory" />
+                <ScalarProperty Name="MessageOutDirectory" ColumnName="MessageOutDirectory" />
+                <ScalarProperty Name="States" ColumnName="States" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SW_BIN">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.SW_BIN">
+              <MappingFragment StoreEntitySet="SW_BIN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LotID" ColumnName="LotID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Defect" ColumnName="Defect" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="FailRate" ColumnName="FailRate" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="IsPassed" ColumnName="IsPassed" />
+                <ScalarProperty Name="Limited" ColumnName="Limited" />
+                <ScalarProperty Name="IsTriggerd" ColumnName="IsTriggerd" />
+                <ScalarProperty Name="FailedBinPercent" ColumnName="FailedBinPercent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="URLS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.URLS">
+              <MappingFragment StoreEntitySet="URLS">
+                <ScalarProperty Name="UrlID" ColumnName="UrlID" />
+                <ScalarProperty Name="UrlPath" ColumnName="UrlPath" />
+                <ScalarProperty Name="NavigatorID" ColumnName="NavigatorID" />
+                <ScalarProperty Name="AllowRoles" ColumnName="AllowRoles" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_GROUPS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.USER_GROUPS">
+              <MappingFragment StoreEntitySet="USER_GROUPS">
+                <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+                <ScalarProperty Name="JoinTime" ColumnName="JoinTime" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="QuitTime" ColumnName="QuitTime" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.USERS">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+                <ScalarProperty Name="AccountState" ColumnName="AccountState" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="ThirdpartyLoginProvider" ColumnName="ThirdpartyLoginProvider" />
+                <ScalarProperty Name="ThirdpartyAccountID" ColumnName="ThirdpartyAccountID" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="BUName" ColumnName="BUName" />
+                <ScalarProperty Name="NewComments" ColumnName="NewComments" />
+                <ScalarProperty Name="WaitForDispose" ColumnName="WaitForDispose" />
+                <ScalarProperty Name="WaitForConfirm" ColumnName="WaitForConfirm" />
+                <ScalarProperty Name="WaitForOtherBinDispose" ColumnName="WaitForOtherBinDispose" />
+                <ScalarProperty Name="EQALots" ColumnName="EQALots" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VENDORS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.VENDORS">
+              <MappingFragment StoreEntitySet="VENDORS">
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="RecordState" ColumnName="RecordState" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="LastOperator" ColumnName="LastOperator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FILE_HITS">
+            <EntityTypeMapping TypeName="SpreadtrumLHDModel.FILE_HITS">
+              <MappingFragment StoreEntitySet="FILE_HITS">
+                <ScalarProperty Name="HitID" ColumnName="HitID" />
+                <ScalarProperty Name="HitTime" ColumnName="HitTime" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="HitType" ColumnName="HitType" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateStamp" ColumnName="UpdateStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

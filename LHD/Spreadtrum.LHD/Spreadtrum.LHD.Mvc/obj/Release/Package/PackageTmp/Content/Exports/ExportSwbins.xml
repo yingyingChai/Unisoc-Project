@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<table name="EXPORTSWBINS" titleCss="font-weight:bold;font-size:9;font-name:Arial;vertical-align:middle;text-align:center;height:20" rowCss="" >
+	<field name="Code" exportTo="Code" CellType="intCell" />
+	<field name="Defect" exportTo="Defect" CellType="strCell" />
+	<field name="Qty" exportTo="Qty" CellType="intCell" />
+	<field name="FailRate" exportTo="Fail Rate" CellType="pctCell" />
+</table>

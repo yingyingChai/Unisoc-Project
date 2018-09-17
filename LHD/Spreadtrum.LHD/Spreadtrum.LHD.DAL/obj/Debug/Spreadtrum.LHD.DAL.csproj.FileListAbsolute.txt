@@ -1,0 +1,13 @@
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\obj\Debug\Spreadtrum.LHD.DAL.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\Spreadtrum.LHD.DAL.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\Spreadtrum.LHD.DAL.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\KaYi.Utilities.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\Spreadtrum.LHD.Entity.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\KaYi.FileSystem.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\bin\Debug\Spreadtrum.LHD.Entity.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\obj\Debug\Spreadtrum.LHD.DAL.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\obj\Debug\Spreadtrum.LHD.DAL.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\obj\Debug\Spreadtrum.LHD.DAL.csproj.CoreCompileInputs.cache
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.DAL\obj\Debug\Spreadtrum.LHD.DAL.csproj.CopyComplete

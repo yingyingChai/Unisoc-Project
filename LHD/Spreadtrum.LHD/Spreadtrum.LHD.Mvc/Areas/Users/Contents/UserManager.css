@@ -1,0 +1,39 @@
+﻿.pager-row {
+    text-align: right;
+}
+#custom-pager {
+    margin-top:10px;
+    display:none;
+    text-align:left;
+    margin-right:10px;
+}
+#custom-pager span {
+    display:inline-block;
+    font-size: 12px;
+}
+#custom-pager .pageNum {
+    width:60px;
+    height: 26px;
+    padding: 3px 5px;
+}
+#custom-pager .totalPages,#custom-pager .currentPage{
+    color:red;
+    margin:0 5px;
+    font-weight:bold;
+}
+#pagerForUsers,#custom-pager .custom-item {
+display:inline-block;
+
+}
+
+#custom-pager .goPage {
+padding:3px 10px;
+}
+
+
+#peUserInput input,#peUserInput select {
+width:100%;
+}
+.custom-text-left {
+text-align:left !important;
+}

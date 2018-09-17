@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AMSInfomation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:AMSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AMSEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AMSRequest" type="tns:ArrayOfAMSRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="AMSRequestActivityFFS" type="tns:ArrayOfAMSRequestActivityFFS" />
+          <s:element minOccurs="0" maxOccurs="1" name="AMSRequestActivityDetail" type="tns:ArrayOfAMSRequestActivityDetail" />
+          <s:element minOccurs="0" maxOccurs="1" name="AMSSobjRequestBase" type="tns:ArrayOfAMSSobjRequestBase" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAMSRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AMSRequest" nillable="true" type="tns:AMSRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AMSRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SysId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IONumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IOSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IODes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AMSNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InitiatedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsititutionType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsititutionName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JustifiedBusinessSelectionCriteria" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LatestVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RFCActivity" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SyncTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHandled" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAMSRequestActivityFFS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AMSRequestActivityFFS" nillable="true" type="tns:AMSRequestActivityFFS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AMSRequestActivityFFS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SysId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Activity_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CVPoolID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProviderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProviderBelongs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProviderLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SelectionCriteria" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Planed_ProvidingTime" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Planed_FeePerTime" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Planed_Total" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBackUp" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actual_ProvidingTime" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actual_FeePerTime" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actual_Total" nillable="true" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProvidingUnit" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Attended" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SAPCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exchange" nillable="true" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tax" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualPayment" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCard" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParticipatCount" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParticipatAmountSUM" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParticipateAmountLimit" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountPercent" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="SyncTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHandled" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAMSRequestActivityDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AMSRequestActivityDetail" nillable="true" type="tns:AMSRequestActivityDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AMSRequestActivityDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SysId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasServiceProvider" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductRelated" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartmentAndProduct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GLAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CostCenter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sub_AMSNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BeginDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Planning_Participant_InternalQuantity" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Planning_Participant_ExternalQuantity" nillable="true" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="Planning_Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Planning_City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Planning_Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Planning_Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actual_BeginDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actual_EndDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actual_Participant_InternalQuantity" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Actual_Participant_ExternalQuantity" nillable="true" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="Actual_City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Actual_Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpenseSubTotal" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="FFSSubTotal" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" nillable="true" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Default" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MonitorStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FreezeStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SyncTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHandled" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAMSSobjRequestBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AMSSobjRequestBase" nillable="true" type="tns:AMSSobjRequestBase" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AMSSobjRequestBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SysId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestSubject" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicantWWID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SMSNotification" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMSNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DueDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatorWWID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SupervisorWWID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatorName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SupervisorName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicantAdAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicantPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicantEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatorAdAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SupervisorAdAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovedDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LatestUpdateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extended" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicantTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SyncTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHandled" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AMSInfomationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AMSInfomationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AMSInfomationSoapIn">
+    <wsdl:part name="parameters" element="tns:AMSInfomation" />
+  </wsdl:message>
+  <wsdl:message name="AMSInfomationSoapOut">
+    <wsdl:part name="parameters" element="tns:AMSInfomationResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MeetingAMSSoap">
+    <wsdl:operation name="AMSInfomation">
+      <wsdl:input message="tns:AMSInfomationSoapIn" />
+      <wsdl:output message="tns:AMSInfomationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MeetingAMSSoap" type="tns:MeetingAMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AMSInfomation">
+      <soap:operation soapAction="http://tempuri.org/AMSInfomation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MeetingAMSSoap12" type="tns:MeetingAMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AMSInfomation">
+      <soap12:operation soapAction="http://tempuri.org/AMSInfomation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MeetingAMS">
+    <wsdl:port name="MeetingAMSSoap" binding="tns:MeetingAMSSoap">
+      <soap:address location="http://115.28.146.196/webservice/meetingams.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MeetingAMSSoap12" binding="tns:MeetingAMSSoap12">
+      <soap12:address location="http://115.28.146.196/webservice/meetingams.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

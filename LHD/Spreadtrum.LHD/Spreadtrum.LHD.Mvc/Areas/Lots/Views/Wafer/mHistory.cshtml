@@ -1,0 +1,233 @@
+﻿@using Spreadtrum.LHD.Entity.Lots;
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Areas/Shared/mMasterpage.cshtml";
+}
+@section css{
+    <link href="~/Areas/Lots/Contents/Query/Query.css" rel="stylesheet" />
+    @*<link href="~/Scripts/Jquery/UI/external/jquery.datetimepicker.css" rel="stylesheet" />*@
+<link href="~/Content/Bootstrap/daterangepicker.css" rel="stylesheet">
+
+    <style>
+        .uploadButtons {
+            padding-top: 10px;
+            padding-left: 0px;
+        }
+
+        .fix-table {
+            table-layout: fixed;
+            width: 2048px;
+        }
+
+            .fix-table td {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+        #MessageCount {
+            width: 90px;
+        }
+
+        #thSelect {
+            width: 90px;
+        }
+
+        #thPart_ID {
+            width: 100px;
+        }
+
+        #ththLotType {
+            width: 90px;
+        }
+
+        #thStatus {
+            width: 140px;
+        }
+
+        #thLotType {
+            width: 90px;
+        }
+
+        #thLotNO {
+            width: 90px;
+        }
+
+        #thAutoJudgeResult {
+            width: 100px;
+        }
+
+        #thHoldReason {
+            width: 260px;
+        }
+
+        #thManualHold {
+            width: 90px;
+        }
+
+        #thQADispose {
+            width: 100px;
+        }
+
+        #thPEDispose {
+            width: 100px;
+        }
+
+        #thSuspectRootCause {
+            width: 100px;
+        }
+
+        #thSPRDDecision {
+            width: 130px;
+        }
+
+        #thCompletionDate {
+            width: 180px;
+        }
+
+        #thQtyIn {
+            width: 90px;
+        }
+
+        #thYield {
+            width: 90px;
+        }
+
+        #thComment {
+            width: 260px;
+        }
+
+        .p80 {
+            width: 80%;
+        }
+
+        .daytdclass {
+            background: #FF7F00;
+        }
+
+        .day3tdclass {
+            background: #FF0000;
+        }
+        .wrapper-content {
+            padding: 0px 10px 10px;
+        }
+
+        .ibox-content {
+            padding: 5px 5px 20px 5px;
+        }
+    </style>
+}
+@section js{
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.cookies.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.proxy.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.queue.js"></script>
+    <script src="~/Content/KaYiLib/Uploader/Referenced/swfupload.speed.js"></script>
+    <script src="~/Scripts/Jquery/UI/external/jquery.datetimepicker.full.js"></script>
+    <script src="~/Areas/Lots/Contents/Wafer/history.js"></script>
+    <script src="~/scripts/Bootstrap/moment.js"></script>
+    <script src="~/scripts/Bootstrap/daterangepicker.js"></script>
+}
+<div class="row">
+    <div class="col-lg-12" style="padding-left:3px;padding-right:0px">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <div class="btu_list" style="position: fixed; top: -40px; right: 0; z-index: 100;">
+                    <a href="javascript:void(0);" class="btn btn-primary operate_buttons" id="btnExport">Export</a>
+                </div>
+
+                <form method="post" id="frmQuery" data-ng-controller="historytable">
+                    <input type="hidden" id="orderBy" name="OrderBy" value="CreateTime" />
+                    <input type="hidden" id="desc" name="OrderDesc" value="true" />
+                    <div class="table-responsive">
+                        <div class="dataTables_wrapper form-inline dt-bootstrap">
+                            <table class="table table-striped table-bordered table-hover table-query " role="grid" style="table-layout:inherit !important;">
+                                <thead>
+                                    <tr role="row">
+                                        <th data-orderby="ProductName" data-desc="true">Product_Name<span></span></th>
+                                        <th data-orderby="WaferCode" data-desc="true">Wafer_Code<span></span></th>
+                                        <th data-orderby="LotId" data-desc="true">Lot_id<span></span></th>
+                                        <th data-orderby="WaferID" data-desc="true">Wf_id<span></span></th>
+                                        <th>Dispose</th>
+                                        <th data-orderby="UserID" data-desc="true">Owner<span></span></th>
+                                        <th data-orderby="Comment" data-desc="true">Comment<span></span></th>
+                                        <th data-orderby="CreateTime" data-desc="true">Time<span></span></th>
+                                    </tr>
+                                    <tr id="QueryTr">
+                                        @*<td></td>*@
+                                        <td><input id="textProductName" name="ProductName" type="text" class="p80" /></td>
+                                        <td><input id="textWaferCode" name="WaferCode" type="text" class="p80" /></td>
+                                        <td><input id="textLotId" name="LotId" type="text" class="p80" /></td>
+                                        <td><input id="textWaferID" name="WaferID" type="text" class="p80" /></td>
+                                        <td>
+                                            <select id="textDispose" name="Dispose">
+                                                <option value=""></option>
+                                                <option value="@((int)WaferSelection.Hold)">Hold</option>
+                                                <option value="@((int)WaferSelection.Release)">Release</option>
+                                                <option value="@((int)WaferSelection.Ink)">Ink&rls</option>
+                                                <option value="@((int)WaferSelection.Split)">split&rls</option>
+                                                <option value="@((int)WaferSelection.RMA)">RMA</option>
+                                                <option value="@((int)WaferSelection.Scrap)">Scrap</option>
+                                                <option value="@((int)WaferSelection.Others)">Others</option>
+                                                <option value="111">Vendor Comfired</option>
+                                            </select>
+                                        </td>
+                                        <td><input id="textUserID" name="UserID" type="text" class="p80" /></td>
+                                        <td><input id="textComment" name="Comment" type="text" class="p80" /></td>
+                                        <td><input id="textCreateTime" name="CreateTime" type="text" class="p80" /></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="u in data.rows">
+                                        <td>{{u.ProductName}}</td>
+                                        <td>{{u.WaferCode}}</td>
+                                        <td>{{u.LotId}}</td>
+                                        <td>{{u.WaferID}}</td>
+                                        <td>{{u.DisposeText}}</td>
+                                        <td>{{u.UserID}}</td>
+                                        <td class="css2" style="text-align:left; ">{{u.Comment}}</td>
+                                        <td>{{u.CreateTime|date:'yyyy/MM/dd'}}</td>
+                                    </tr>
+                                    <tr id="loadingLots">
+                                        <td colspan="45" style="text-align:left">
+                                            <div><img src="~/images/loading.gif" /></div>
+                                            <div>Loading...</div>
+                                        </td>
+                                    </tr>
+                                    <tr id="lotsNotFound" style="display:none">
+                                        <td colspan="45" style="text-align:left">
+                                            No lots found.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-5">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="pager-row">
+                                <div id="pager">
+                                </div>
+                                <div id="custom-pager" class="pull-right">
+                                    <span><span class="currentPage"></span>/<span class="totalPages"></span></span>
+                                    <div class="input-group custom-item">
+                                        <input type="number" class="form-control pageNum" min="1" value="1">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary btn-sm goPage" type="button">Go</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{B954536D-38AA-40B5-9205-A7126677FBFA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>KaYi.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KaYi.Utilities\DateHelper.cs" />
+    <Compile Include="KaYi.Utilities\FcEncode.cs" />
+    <Compile Include="KaYi.Utilities\FileService.cs" />
+    <Compile Include="KaYi.Utilities\HashUtilities.cs" />
+    <Compile Include="KaYi.Utilities\Html.cs" />
+    <Compile Include="KaYi.Utilities\HttpClient.cs" />
+    <Compile Include="KaYi.Utilities\Image.cs" />
+    <Compile Include="KaYi.Utilities\IP.cs" />
+    <Compile Include="KaYi.Utilities\ListComparer.cs" />
+    <Compile Include="KaYi.Utilities\MD5Utilities.cs" />
+    <Compile Include="KaYi.Utilities\PagerUtility.cs" />
+    <Compile Include="KaYi.Utilities\RandomPassword.cs" />
+    <Compile Include="KaYi.Utilities\SearchEngineHelper.cs" />
+    <Compile Include="KaYi.Utilities\SetWindowPosFlags.cs" />
+    <Compile Include="KaYi.Utilities\StringHelper.cs" />
+    <Compile Include="KaYi.Utilities\TelnetClient.cs" />
+    <Compile Include="KaYi.Utilities\UI.cs" />
+    <Compile Include="KaYi.Utilities\Url.cs" />
+    <Compile Include="KaYi.Utilities\ValueChecker.cs" />
+    <Compile Include="KaYi.Utilities\WebClientOperator.cs" />
+    <Compile Include="KaYi.Utilities\WindowsAPI.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

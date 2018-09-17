@@ -1,0 +1,145 @@
+﻿.dropdown .dropdown-menu {
+	width: 100%;
+	z-index: 1000;
+}
+
+.table.table-hover tbody tr {
+	background: none;
+}
+	.table.table-hover tbody tr.isPending,.table.table-hover tbody tr.isPending a {
+		background-color:#fcff00;
+		color: #000;
+	}
+
+
+	.table.table-hover tbody tr.isRelease,.table.table-hover tbody tr.isRelease a {
+		background-color:#b6ffb9;
+		color: #000;
+	}
+	.table.table-hover tbody tr.isBin1Release,.table.table-hover tbody tr.isBin1Release a {
+		background-color: #b1c9ff;
+		color: #000;
+	}
+	.table.table-hover tbody tr.isScrap,.table.table-hover tbody tr.isScrap a  {
+		background-color: #d8d8d8;
+		color: #000;
+	}
+	.table.table-hover tbody tr.isRescreen,.table.table-hover tbody tr.isRescreen a{
+		background-color: #fffbc0;
+		color: #000;
+	}
+	.table.table-hover tbody tr.isHold ,.table.table-hover tbody tr.isHold a {
+		background-color: #ffbcb7;
+		color: #000;
+	}
+     .table.table-hover tbody tr.isOperationHold,.table.table-hover tbody tr.isOperationHold a {
+		background-color: #ffe599;
+		
+	}
+	.table.table-hover tbody tr.isclick,.table.table-hover tbody tr.isclick a{
+		background-color: #025e9d;
+		color: #fff;
+	}
+    
+    
+    .css2 {
+          overflow: hidden; /*自动隐藏文字*/
+        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+        white-space: nowrap;/*强制不换行*/
+        width: 200px;/*不允许出现半汉字截断*/
+        /*color: #3399FF;*/
+        display:block;
+        /*height:32px;*/
+     }
+    .css3 {
+        overflow: hidden; /*自动隐藏文字*/
+        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+        white-space: nowrap;/*强制不换行*/
+        width: 100px;/*不允许出现半汉字截断*/
+        display:block;
+     }
+     .css4 {
+        overflow: hidden; /*自动隐藏文字*/
+        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+        white-space: nowrap;/*强制不换行*/
+        width: 260px;/*不允许出现半汉字截断*/
+        display:block;
+     }
+      .css5 {
+          overflow: hidden; /*自动隐藏文字*/
+        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+        white-space: nowrap;/*强制不换行*/
+        width: 100px;/*不允许出现半汉字截断*/
+        /*color: #3399FF;*/
+        display:block;
+        /*height:32px;*/
+     }
+.table-query th {
+	cursor: pointer;
+}
+
+	.table-query th span {
+		padding-left: 5px;
+		font-weight: bolder;
+		font-size: 18px;
+	}
+
+
+.loadingBox 
+{
+    text-align:center;
+    min-height:520px;
+    padding-top:120px;
+}
+
+
+#noLotsFound 
+{
+    text-align:center;
+    padding:50px 0px; 
+}
+#QueryTrSubmit
+{
+	width:0px;
+	height:0px;
+	border:0px;
+}
+.pager-row {
+    text-align: right;
+}
+#custom-pager {
+    margin-top:10px;
+    display:none;
+    text-align:left;
+    margin-right:10px;
+}
+#custom-pager span {
+    display:inline-block;
+    font-size: 12px;
+}
+#custom-pager .pageNum {
+    width:60px;
+    height: 26px;
+    padding: 3px 5px;
+}
+#custom-pager .totalPages,#custom-pager .currentPage{
+    color:red;
+    margin:0 5px;
+    font-weight:bold;
+}
+#pager,#custom-pager .custom-item {
+display:inline-block;
+
+}
+
+#custom-pager .goPage {
+padding:3px 10px;
+}
+
+.fixed_nav {
+    position:fixed;
+    top:0px;
+    right:46px;
+}
+
+

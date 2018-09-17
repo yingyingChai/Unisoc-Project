@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<table name="EXPORTLOTS" titleCss="font-weight:bold;font-size:9;font-name:Arial;vertical-align:middle;text-align:center;height:20" rowCss="" >
+	<field name="VendorName" exportTo="Vendor Name" CellType="strCell" />
+	<field name="Status" exportTo="Status" CellType="strCell" />
+	<field name="AutoJudgeResult" exportTo="Auto Judge Result" CellType="strCell" />
+	<field name="HoldReason" exportTo="Hold Reason" CellType="strCell" />
+	<field name="ManualHold" exportTo="Manual Hold" CellType="boolCell" />
+	<field name="VenderJudgeResult" exportTo="Vender Judge Result" CellType="strCell" />
+	<field name="QADisposeText" exportTo="QA Dispose" CellType="strCell" />
+	<field name="PEDisposeText" exportTo="PE Dispose" CellType="strCell" />
+	<field name="SPRDDecisionText" exportTo="SPRD Decision" CellType="strCell" />
+	<field name="DeviceCode" exportTo="Device Code" CellType="strCell" />
+	<field name="DeviceName" exportTo="Device Name" CellType="strCell" />
+	<field name="LotType" exportTo="Lot Type" CellType="strCell" />
+  <field name="Stage" exportTo="Stage" CellType="strCell" />
+	<field name="LotNO" exportTo="Lot No." CellType="strCell" />
+	<field name="SubconLot" exportTo="Subcon Lot" CellType="strCell" />
+	<field name="TestProgram" exportTo="Test Program" CellType="strCell" />
+	<field name="CompletionDate" exportTo="Completion Date" CellType="dateCell" />
+	<field name="Die1LotNO" exportTo="Die 1 Lot NO." CellType="strCell" />
+	<field name="Die1CP" exportTo="Die 1 CP" CellType="strCell" />
+	<field name="Die2LotNO" exportTo="Die 2 Lot NO." CellType="strCell" />
+	<field name="Die2CP" exportTo="Die 2 CP" CellType="strCell" />
+	<field name="Die3LotNO" exportTo="Die 3 Lot NO." CellType="strCell" />
+	<field name="Die3CP" exportTo="Die 3 CP" CellType="strCell" />
+	<field name="Die4LotNO" exportTo="Die 4 Lot NO." CellType="strCell" />
+	<field name="Die4CP" exportTo="Die 4 CP" CellType="strCell" />
+	<field name="QtyIn" exportTo="Qty.In" CellType="intCell" />
+	<field name="Yield" exportTo="Yield" CellType="pctCell" />
+	<field name="OSRate" exportTo="O/S Rate" CellType="pctCell" />
+	<field name="Loss" exportTo="Loss" CellType="intCell" />
+	<field name="Damage" exportTo="Damage" CellType="intCell" />
+	<field name="Bin1" exportTo="Bin1" CellType="intCell" />
+	<field name="Bin2" exportTo="Bin2" CellType="intCell" />
+	<field name="Bin3" exportTo="Bin3" CellType="intCell" />
+	<field name="Bin4" exportTo="Bin4" CellType="intCell" />
+	<field name="Bin5" exportTo="Bin5" CellType="intCell" />
+	<field name="Bin6" exportTo="Bin6" CellType="intCell" />
+	<field name="Bin7" exportTo="Bin7" CellType="intCell" />
+  <field name="Bin8" exportTo="Bin8" CellType="intCell" />
+  <field name="Bin9" exportTo="Bin9" CellType="intCell" />
+  <field name="Bin10" exportTo="Bin10" CellType="intCell" />
+	<field name="RetestTimes" exportTo="Retest Time" CellType="intCell" />
+	<field name="TesterID" exportTo="Tester I.D." CellType="strCell" />
+	<field name="Platforms" exportTo="Platform" CellType="strCell" />
+	<field name="LBNO" exportTo="L/B NO." CellType="strCell" />
+</table>

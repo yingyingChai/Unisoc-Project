@@ -1,0 +1,12 @@
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\Spreadtrum.LHD.Business.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\KaYi.Emails.Library.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\KaYi.FileSystem.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\KaYi.Utilities.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\Newtonsoft.Json.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\Spreadtrum.LHD.DAL.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\Spreadtrum.LHD.Entity.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\KaYi.Database.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\KaYi.Services.EventServices.dll
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\bin\Release\Spreadtrum.LHD.Entity.pdb
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\obj\Release\Spreadtrum.LHD.Business.csprojResolveAssemblyReference.cache
+D:\LHD\Spreadtrum.LHD\Spreadtrum.LHD.Business\obj\Release\Spreadtrum.LHD.Business.dll
